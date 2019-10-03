@@ -1,0 +1,32 @@
+extends _layout
+block page_title
+  title Pug 模板 | 首頁
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+    body{
+
+      color: #666
+    }
+    .slider{
+      &.hide{
+        opacity: 0.5;
+      }
+    }
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  h2 VueJs資料
+  .sliderWarp#Slider
+    .wrap#Slider
+      .slider(v-for="slider in sliders" :style="bgcss(slider.cover)" v-if="slider.visible")
+        a(:href="slider.link" )
+          h3 {{slider.title}}
+        
+
+
+
+    //- i.be-icon.be-icon-arror-left

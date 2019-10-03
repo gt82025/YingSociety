@@ -1,0 +1,102 @@
+@font-face {
+	font-family: "icon";
+	src: url('../fonts/icons/icon.eot?1570067790902');
+	src: url('../fonts/icons/icon.eot?#iefix-1570067790902') format('embedded-opentype'),
+	url('../fonts/icons/icon.woff2?1570067790902') format('woff2'),
+	url('../fonts/icons/icon.woff?1570067790902') format('woff'),
+	url('../fonts/icons/icon.ttf?1570067790902') format('truetype'),
+	url('../fonts/icons/icon.svg?1570067790902#icon') format('svg');
+}
+
+.be-icon:before {
+	font-family: "icon";
+
+	// Font smoothing. That was taken from TWBS
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	font-style: normal;
+	font-weight: normal;
+
+	// For safety - reset parent styles, that can break glyph codes
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	// only necessary if not using the private unicode range (firstGlyph option)
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+
+	// fix buttons height, for twitter bootstrap
+	line-height: 1em;
+
+	// Animation center compensation - margins should be symmetric
+	// remove if not needed
+	margin-left: .2em;
+
+	// you can be more comfortable with increased icons size
+	// font-size: 120%;
+
+	// Uncomment for 3D effect
+	// text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+
+/* Glyphs list */
+
+
+.be-icon-arrowLeft:before {
+ content: '\ea01';
+}
+
+.be-icon-arrowRight:before {
+ content: '\ea02';
+}
+
+.be-icon-cartstep2:before {
+ content: '\ea03';
+}
+
+.be-icon-cartstep3:before {
+ content: '\ea04';
+}
+
+.be-icon-fb:before {
+ content: '\ea05';
+}
+
+.be-icon-head:before {
+ content: '\ea06';
+}
+
+.be-icon-link:before {
+ content: '\ea07';
+}
+
+.be-icon-mail:before {
+ content: '\ea08';
+}
+
+.be-icon-media:before {
+ content: '\ea09';
+}
+
+.be-icon-media2:before {
+ content: '\ea0a';
+}
+
+.be-icon-webLogo:before {
+ content: '\ea0b';
+}
+
+.be-icon-zoom:before {
+ content: '\ea0c';
+}
+

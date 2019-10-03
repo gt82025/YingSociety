@@ -1,0 +1,194 @@
+// mixin ---------------------------------------------------add on Dec 12 2017
+=ama($option...)
+    $size: length($option)
+    @if $size == 1 or $size == 2
+    
+    @else if $size == 3
+        $type: nth($option, 1)
+        $dura: nth($option, 2)
+        $dely: nth($option, 3)
+        transition-property: $type
+        transition-duration: $dura
+        transition-delay: $dely
+    @else if $size == 4
+        $type: nth($option, 1)
+        $dura: nth($option, 2)
+        $dely: nth($option, 3)
+        $timing: nth($option, 4)
+        transition-property: $type
+        transition-duration: $dura
+        transition-delay: $dely
+        transition-timing-function: $timing
+    
+// 動畫函數
+//+ama(type, 過度, delay)
+
+//創建一堆字級
+=fzc($option...)
+    $size: length($option)
+    $optionSetting: "" 
+    @if $size == 0 and $size == 1
+
+    @if $size == 2  
+        $startSize: nth($option, 1) 
+        $maxSize: nth($option, 2) 
+        @for $i from $startSize to $maxSize+1
+            @if $i <= 18
+                .f#{$i}
+                    font-size: rem-calc($i)
+                    line-height: rem-calc($i + 9 + ($i - ($i - 1)) * 1.5 )
+                .mf#{$i}
+                    @media only screen and (max-width: 780px)
+                        font-size: rem-calc($i)
+                        line-height: rem-calc($i + 9 + ($i - ($i - 1)) * 1.5 )                    
+                .sf#{$i}
+                    @media only screen and (max-width: 480px)
+                        font-size: rem-calc($i)
+                        line-height: rem-calc($i + 9 + ($i - ($i - 1)) * 1.5 )
+            @else
+                @if $i % 2 == 0   
+                    .f#{$i}
+                        font-size: rem-calc($i)
+                        line-height: rem-calc($i + 9 + ($i - ($i - 1)) * 1.5 )
+                    .mf#{$i}
+                        @media only screen and (max-width: 780px)
+                            font-size: rem-calc($i)
+                            line-height: rem-calc($i + 9 + ($i - ($i - 1)) * 1.5 )                        
+                    .sf#{$i}
+                        @media only screen and (max-width: 480px)
+                            font-size: rem-calc($i)
+                            line-height: rem-calc($i + 9 + ($i - ($i - 1)) * 1.5 )        
+
+//創建flexbox
+=fc($option...)
+    $size: length($option)
+    $optionSetting: ""
+    display: flex
+    @if $size == 0
+        justify-content: center //橫向置中均分
+        align-items: stretch //垂直置上
+    @else if $size == 2
+        $propertyName: nth($option, 1)
+        $value: nth($option, 2)
+        #{-webkit-}#{$propertyName} : $value
+        #{$propertyName} : $value
+
+    @else
+        @if nth($option, 1) == d
+            flex-direction: row
+        @else    
+            flex-direction: nth($option, 1) 
+        @if nth($option, 2) == d
+            flex-wrap: nowrap
+        @else
+            flex-wrap: nth($option, 2)
+        @if nth($option, 3) == d
+            justify-content: flex-start
+        @else    
+            justify-content: nth($option, 3)
+        @if nth($option, 4) == d
+            align-items: stretch
+        @else    
+            align-items: nth($option, 4)
+        @if nth($option, 5) == d
+            align-content: flex-start
+        @else     
+            align-content: nth($option, 5)
+// flex函數           
+// +fc(flex-direction,flex-wrap,justify-content,align-items,align-content)
+// +fc(justify-content,center) 
+=cw
+    color: #ffffff 
+=bw
+    background-color: #ffffff 
+
+$cubic: cubic-bezier(.19,1,.22,1)
+
+@function rem-calc($size) 
+    $remSize: $size / 16
+    @return #{$remSize}rem
+
+
+
+/*---------------animation mixin--------------------------------------------------*/
+
+=animation($animate...)
+    $max: length($animate)
+    $animations: ""
+    @for $i from 1 through $max 
+        $animations: #{$animations + nth($animate, $i)}
+        @if $i < $max 
+            $animations: #{$animations + ", "}
+    -webkit-animation: $animations
+    -moz-animation: $animations
+    -o-animation: $animations
+    animation: $animations  
+
+=keyframes($animationName)
+    @-webkit-keyframes #{$animationName} 
+        @content
+    @-moz-keyframes #{$animationName} 
+        @content    
+    @-o-keyframes #{$animationName}
+        @content
+    @keyframes #{$animationName} 
+        @content
+/*---------------animation mixin--------------------------------------------------*/    
+/*---Example-----------------------
+
+    @include keyframes(fade) {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      
+      @include animation(fade 5s infinite); 
+
+    }
+
+    -----------------------*/    
+// mixin ---------------------------------------------------add on Dec 12 2017    
+
+@include keyframes(mainLogoFlip)
+    0%
+        transform: rotateY(0deg)            
+    10%
+        transform: rotateY(6deg)            
+    20%
+        transform: rotateY(-5deg)      
+    30%
+        transform: rotateY(5deg)  
+    40%
+        transform: rotateY(-5.1deg)      
+    50%
+        transform: rotateY(8deg)  
+    60%
+        transform: rotateY(-7.5deg)       
+    70%
+        transform: rotateY(7deg)     
+    80%
+        transform: rotateY(-6.3deg)    
+    90%
+        transform: rotateY(9deg)      
+    100%
+        transform: rotateY(0deg)   
+
+@include keyframes(towardRightShake)
+    0%            
+        transform: rotate(0deg) scale(1)   
+    10%            
+        transform: rotate(-6deg) scale(1.13) 
+    20%            
+        transform: rotate(6deg) scale(1)      
+    30%            
+        transform: rotate(-4deg) scale(1.14)    
+    40%            
+        transform: rotate(4deg) scale(1)     
+    55%            
+        transform: rotate(0deg) scale(1)          
+    100%            
+        transform: rotate(0deg) scale(1)                     

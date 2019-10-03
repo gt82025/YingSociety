@@ -1,0 +1,118 @@
+extends _layout
+block page_title
+  title 瀛社 - 首頁
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript" src="js/vendor/swiper.min.js")
+  script(type="text/javascript" src="js/index.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  article.maincontent
+    .index-slider.swiper-container
+      .swiper-wrapper
+        a.swiper-slide(href="#" style="background-image:url(images/slider_1.png)")
+        a.swiper-slide(href="#" style="background-image:url(images/slider_1.png)")
+        a.swiper-slide(href="#" style="background-image:url(images/slider_1.png)")
+      .swiper-pagination
+    section.news
+      h2 公告專區
+      h3 NEWS
+      .newsContainer
+        a.newsBoard(href="#")
+          p.date 2018-06-06
+          p.title 瀛社107年度冬至組例會通知
+          p.content 謹訂107年12月16日（星期日）14時，假臺北市天祥路48巷8號1樓（吉祥樓餐廳）召開本會107年冬至組擊缽例會...
+        a.newsBoard(href="#")
+          p.date 2018-06-06
+          p.title 臺灣瀛社詩學會第二屆大專生古典詩獎比賽入選名單公告
+          p.content 謹訂107年12月16日（星期日）14時，假臺北市天祥路48巷8號1樓（吉祥樓餐廳）召開本會107年冬至組擊缽例會...
+        a.newsBoard(href="#")
+          p.date 2018-06-06
+          p.title 瀛社107年度冬至組例會通知
+          p.content 謹訂107年12月16日（星期日）14時，假臺北市天祥路48巷8號1樓（吉祥樓餐廳）召開本會107年冬至組擊缽例會...
+      a(href="#").allNews 所有公告 +
+    section.history
+      h2 歷史介紹
+      h3 HISTORY
+      .historyContent
+        .left(style="background-image:url(images/photoOld.png)")
+          img(src="images/photoOld.png", alt="")
+        .right
+          a.allHistory(href="history.html") 所有事紀 +
+          p.year 1909
+          p.title 瀛社成立
+          p.content.History 明治四十二年（西元一九○九）先是原籍臺南，旅居北市，任職《臺灣日日新報》編輯之謝汝銓與記者林馨蘭倡首，三月七日假艋舺平樂遊旗亭召開成立大會，時為農曆二月十六，乃民俗花朝節之翌日，故以花朝為社慶之日。成立之初，社員約八十人左右，就中領有茂才以上功名者即達二十餘人，其他亦皆島中碩儒。以洪以南為北臺名士，推為首任社長。
+    section.biography
+      h2 社員傳記
+      h3 BIOGRAPHY
+      .biographyContent
+        .biographyBg(style="background-image:url(images/biography.png)")
+        .subMenu
+
+          a.hightLight(href="member_content.html")  
+            .icon
+              i.be-icon.be-icon-head
+
+            p 清珠落水
+          a.hightLight(href="member_content.html")  
+            .icon
+              i.be-icon.be-icon-head
+            p 四川夏荷
+          a.hightLight(href="member_content.html")  
+            .icon
+              i.be-icon.be-icon-head
+            p 斑駁陸離
+          a.all(href="members.html")
+            p 所有社員  
+    section.literature
+      h2 文獻
+      h3 LITERATURE   
+      .literatureContainer
+        a.coverContainer(href="literasture_detail.html") 
+          .head 總輯
+          .cover.style1 台灣瀛社詩學學會叢書特4：瀛社風義錄
+          p 林正三
+        a.coverContainer(href="literasture_detail.html") 
+          .head 別輯
+          .cover.style2 日治時期南社詩選   
+          p 莊龍
+        a.coverContainer(href="literasture_detail.html") 
+          .head 刊物
+          .cover.style3 詩海慈航 v.2
+          p 莊太岳
+        a.coverContainer(href="literasture_detail.html") 
+          .head 論文
+          .cover.style4 瀛社與臺灣詩學發展學術研討會
+          p 林子瑾
+        a.coverContainer(href="literasture_detail.html") 
+          .head 藏書
+          .cover.style5 近代史 百年同仁堂 樂家創始憶往
+          p 吳子瑜
+      a(href="#").allLiteratures 所有文獻 +    
+    section.partners
+      h2 友社
+      h3 PARTENERS  
+      .partnersContainer
+        a.Link(href="#")
+          img(src="images/partner1.png", alt="")
+          p 齊東詩社
+        a.Link(href="#")
+          img(src="images/partner2.png", alt="")
+          p 櫟社
+        a.Link(href="#")
+          img(src="images/partner3.png", alt="")
+          p 風車詩社  
+        a.Link(href="#")
+          img(src="images/partner4s.png", alt="")     
+          p 藍星詩社   
+        a.Link(href="#")
+          img(src="images/partner5.png", alt="")
+          p 鹽分地帶  
+
+    //- i.be-icon.be-icon-arror-left

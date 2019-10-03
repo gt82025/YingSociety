@@ -1,0 +1,90 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 關於我們
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript" src="js/vendor/swiper.min.js")
+  script(type="text/javascript" src="js/index.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  .popupContent
+    a.close(href="javascript;;")
+
+    .frame  
+      img(src="images/partner4.png", alt="")
+      p 簡言之，本局以辦理大型音樂祭規模一半以下之經費，透過補助的方式合作辦理大港開唱，不但節省預算，亦可達到預期的音樂祭內容與增加流行音樂觀賞人口的效果。  
+
+
+  article.maincontent.HistoryContent.inside
+    .introBanner(style="background-image:url(images/banner-history.png)")
+      h1 大事記
+      h2 HISTORY
+      .track
+        img(src="images/home.png", alt="")
+        a.home(href="#") 首頁
+        a.link(href="#") 大事記
+        a.now 瀛社創立
+    .historyContent.detail
+      .navPage
+        a.prev(href="#") <i class="be-icon be-icon-arrowLeft"> 上一篇</i>
+        .now
+          p.Year 1961
+          p.Month May
+        a.next(href="#") 下一篇 
+          i.be-icon.be-icon-arrowRight
+      articlc.main
+        img(src="images/historyContentPic.png", alt="")
+        section.content
+          h2 瀛社創立
+          p 氏著眼於振興實業，挽回利權，先後籌辦粵漢鐵路、漢冶萍公司、彰廈鐵路。又提倡男女平權之說，在榕廈各地，捐助女學，貢獻洋務等運動不鮮。清社既傾，遂轉經商，寖為臺灣財界鉅子。於日人統治下，力爭民族資本之發達，及臺民經濟地位之向上。1908年4月，任剛成立未久之「林本源製糖會社」副社長。3年後林本源家族分產，乃於次年返臺繼承事業，先後被選為《臺灣日日新報》社、新高銀行、ボルネオ護謨株式會社、臺灣炭礦株式會社、臺灣紡織等各株式會社之監察役，東洋協會臺灣支部、南洋協會臺灣支部、臺灣礦業會等各評議員，漢冶萍鐵礦公司董事以及中日銀行、九州製鐵、臺灣製鹽、臺灣煉瓦、日本拓殖、更於1919年創立其主要事業華南銀行，任總理，又任太永興株式會社社長、內外製糖株式會社取締役社長、林本源製糖株式會社社長等職。並在日本政府機構中擔任臺北廳參事、大稻埕區長、臺北州協議會員、臺灣總督府評議員等職，復被推為帝國在鄉軍人會臺灣支部名譽會員。 
+          a.media(href="#") 
+            i.be-icon.be-icon-media2 欣賞影片
+        section.album    
+          a(href="javascript:;").popup
+            .bg(style="background-image:url(images/historyContent_4.png)")
+            .profile
+              .zoomBox
+                i.be-icon.be-icon-zoom
+              p 大稻埕區長、臺北州協議會員、臺灣總督府評議員等職，復被推為帝國在鄉軍人會臺灣支部名譽會員，獲頒愛國婦人會七寶金色有功章及總督府頒授之勳章。     
+            img(src="images/historyContent_4.png", alt="")
+          a(href="javascript:;").popup
+            .bg(style="background-image:url(images/historyContent_1.png)")
+            .profile
+              .zoomBox
+                i.be-icon.be-icon-zoom
+              p 大稻埕區長、臺北州協議會員、臺灣總督府評議員等職，復被推為帝國在鄉軍人會臺灣支部名譽會員，獲頒愛國婦人會七寶金色有功章及總督府頒授之勳章。              
+            img(src="images/historyContent_1.png", alt="")
+          a(href="javascript:;").popup
+            .bg(style="background-image:url(images/historyContent_2.png)")
+            .profile
+              .zoomBox
+                i.be-icon.be-icon-zoom
+              p 大稻埕區長、臺北州協議會員、臺灣總督府評議員等職，復被推為帝國在鄉軍人會臺灣支部名譽會員，獲頒愛國婦人會七寶金色有功章及總督府頒授之勳章。              
+            img(src="images/historyContent_2.png", alt="")
+          a(href="javascript:;").popup
+            .bg(style="background-image:url(images/historyContent_3.png)")
+            .profile
+              .zoomBox
+                i.be-icon.be-icon-zoom
+              p 大稻埕區長、臺北州協議會員、臺灣總督府評議員等職，復被推為帝國在鄉軍人會臺灣支部名譽會員，獲頒愛國婦人會七寶金色有功章及總督府頒授之勳章。              
+            img(src="images/historyContent_3.png", alt="")
+          a(href="javascript:;").popup
+            .bg(style="background-image:url(images/historyPic3.png)")
+            .profile
+              .zoomBox
+                i.be-icon.be-icon-zoom
+              p 大稻埕區長、臺北州協議會員、臺灣總督府評議員等職，復被推為帝國在鄉軍人會臺灣支部名譽會員，獲頒愛國婦人會七寶金色有功章及總督府頒授之勳章。              
+            img(src="images/historyPic3.png", alt="")
+
+
+            
+
+            
+
+          

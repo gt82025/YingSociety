@@ -1,0 +1,62 @@
+{
+    "BannerSliders" :[
+      {
+        "title": "Blade Runner 2045",
+        "sub": "Drama, Action",
+        "cover": "https://media.taaze.tw/showThumbnail.html?sc=11100874609&height=400&width=310",
+        "link": "https://www.taaze.tw/goods/11100723510.html",
+        "visible": true
+      },
+      {
+        "title": "Logan",
+        "sub": "Drama, Action",
+        "cover": "https://media.taaze.tw/showThumbnail.html?sc=11100885139&height=400&width=310",
+        "link": "https://www.taaze.tw/goods/11100879238.html",
+        "visible": true
+      },
+      {
+        "title": "JAMES 127 Hours",
+        "sub": "Drama, Action",
+        "cover": "https://media.taaze.tw/showThumbnail.html?sc=11100887098&height=400&width=310",
+        "link": "https://www.taaze.tw/goods/11100573017.html",
+        "visible": true
+      },
+      {
+        "title": "Harry Potter",
+        "sub": "Drama, Action",
+        "cover": "https://media.taaze.tw/showThumbnail.html?sc=11100885132&height=400&width=310",
+        "link": "https://www.taaze.tw/goods/11100885132.html",
+        "visible": false
+      }
+    ],
+    "history":[
+      {
+        "name": "Blade Runner 2045",
+        "type": "Drama, Action",
+        "cover": "https://imgc.allpostersimages.com/img/posters/blade-runner-2049-fire-ice_u-L-F9524N0.jpg?src=gp&w=300&h=375",
+        "link": "Blade Runner 2049 is a 2017 American neo-noir science fiction film directed by Denis Villeneuve and written by Hampton Fancher and Michael Green.",
+        "open": false
+      },
+      {
+        "name": "Logan",
+        "type": "Drama, Action",
+        "cover": "http://www.joblo.com/posters/images/full/logan-poster-3.jpg",
+        "description": "Blade Runner 2049 is a 2017 American neo-noir science fiction film directed by Denis Villeneuve and written by Hampton Fancher and Michael Green.",
+        "open": false
+      },
+      {
+        "name": "JAMES 127 Hours",
+        "type": "Drama, Action",
+        "cover": "http://cdn.collider.com/wp-content/uploads/127_hours_movie_poster_large_01.jpg",
+        "description": "Blade Runner 2049 is a 2017 American neo-noir science fiction film directed by Denis Villeneuve and written by Hampton Fancher and Michael Green.",
+        "open": false
+      },
+      {
+        "name": "Harry Potter",
+        "type": "Drama, Action",
+        "cover": "https://i.pinimg.com/originals/61/2b/bf/612bbfe53a59beb87e6dd2e8047d2866.jpg",
+        "description": "Harry Potter is a series of fantasy novels written by British author J. K. Rowling.",
+        "open": false
+      }
+    ]
+    }

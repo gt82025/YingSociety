@@ -1,0 +1,7 @@
+*.png
+*.jpg
+*.jpeg
+*.gif
+_DS_Store
+__MACOSX/
+Thumbs.db

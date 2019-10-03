@@ -1,0 +1,390 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 關於我們
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript" src="js/vendor/swiper.min.js")
+  script(type="text/javascript" src="js/index.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  article.maincontent.oldMember.inside
+    .introBanner(style="background-image:url(images/banner-member.png)")
+      h1 社員傳記
+      h2 Member biography
+      .track
+        img(src="images/home.png", alt="")
+        a.home(href="#") 首頁
+        a.now 社員傳記
+    section.oldMemberList
+      form
+        .toolContain
+          label.filter 
+            p 排序方式 : 
+            select.selectClean
+              option(value="") 請選擇
+              option(value="") 姓氏筆畫
+              option(value="") 生卒年
+              option(value="") 資料更新日期
+          label.search
+              p 搜尋 : 
+              input(placeholder="請輸入關鍵字")
+      section.List
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 吳
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 黃
+                img(src="images/oldMember3.png", alt="")
+            .content
+              h2 黃梅樹 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 辜
+            .content
+              h2 辜成允
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄          
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 賴
+                img(src="images/oldMember2.png", alt="")
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 吳
+                img(src="images/oldMember.png", alt="")
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                c
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 吳
+                img(src="images/oldMember3.png", alt="")
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄                         
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 賴
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄          
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 吳
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 吳
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+        .single
+          a.left(href="#")
+            .head
+              .lastName 
+                p 吳
+            .content
+              h2 吳新榮 
+                span.birth (1907年11月12日－1967年3月27日)   
+              p 臺灣健康醫院學會成立已經邁入第九年了，歷經過去三任理事長的努力經營已經成為世界衛生組織(WHO)HPH國際最大網絡(臺灣共有160家國際網絡會員)。我們歷年來參加國際研討會的人數及論文篇數都主導整個大會，這樣的成就除了感謝大家的努力外我們並不自滿反而覺得責任更重大。因應未來四年應該有一些改變以進入新的...more  
+                
+          .right 
+            ul.docList
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 早年生平
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="") 
+                  p 紀念與追思
+              li
+                a(href="#") 
+                  img(src="images/pdfIcon.png", alt="")
+                  p 作品、自傳、日記等的出版
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄
+                
+              li
+                a(href="#")
+                  img(src="images/pdfIcon.png", alt="")
+                  p 吳新榮回憶錄                              
+        .pageNav
+          a.prev(href="#") 
+            i.be-icon.be-icon-arrowLeft 
+            span 上一頁
+          a.num.active(href="#") 1
+          a.num(href="#") 2
+          a.num(href="#") 3
+          a.num(href="#") 4
+          a.num(href="#") 5
+          span ...
+          a.num(href="#") 20
+          a.num(href="#") 21
+          a.next(href="#") 
+            span 下一頁
+            i.be-icon.be-icon-arrowRight 
+                  
+          
+
+      
