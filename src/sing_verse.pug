@@ -1,0 +1,81 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 關於我們
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript" src="js/vendor/swiper.min.js")
+  script(type="text/javascript" src="js/index.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  article.maincontent.sing.inside
+    .introBanner(style="background-image:url(images/banner-sing.png)")
+      h1 吟唱專區
+      h2 Singing Verse
+      .track
+        img(src="images/home.png", alt="")
+        a.home(href="#") 首頁
+        a.now 吟唱專區
+    section.search
+      label
+        span 搜尋 : 
+        input(type="text" placeholder="請輸入關鍵字").phColor
+    section.list
+      .link
+        a.title(href="#")
+          h3 作者 : 
+            span 吳新榮 
+          h3 吟唱者 : 
+            span 陳虛谷 
+        a.name(href="#") 
+          h3 北投雜詠   
+        .mediaList
+          a(href="#")   
+            i.be-icon.be-icon-media2 
+            span 影音賞析
+          a(href="#")   
+            i.be-icon.be-icon-media2 
+            span 影音賞析
+          a(href="#")   
+            i.be-icon.be-icon-media2 
+            span 影音賞析         
+      .link
+        a.title(href="#")
+          h3 作者 : 
+            span 吳新榮 
+          h3 吟唱者 : 
+            span 陳虛谷 
+        a.name(href="#") 
+          h3 北投雜詠   
+        .mediaList
+          a(href="#")   
+            i.be-icon.be-icon-media2 
+            span 影音賞析
+          a(href="#")   
+            i.be-icon.be-icon-media2 
+            span 影音賞析
+          a(href="#")   
+            i.be-icon.be-icon-media2 
+            span 影音賞析                       
+    section.pageNavContent
+      .pageNav
+        a.prev(href="#") 
+          i.be-icon.be-icon-arrowLeft 
+          span 上一頁
+        a.num.active(href="#") 1
+        a.num(href="#") 2
+        a.num(href="#") 3
+        a.num(href="#") 4
+        a.num(href="#") 5
+        span ...
+        a.num(href="#") 20
+        a.num(href="#") 21
+        a.next(href="#") 
+          span 下一頁
+          i.be-icon.be-icon-arrowRight        
+             

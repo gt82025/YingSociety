@@ -1009,6 +1009,122 @@ article.maincontent
 		max-width: 1024px	
 		margin-right: auto
 		margin-left: auto
+	&.sing
+		section.list
+			+fc(justify-content,space-between)
+			margin-right: auto
+			margin-left: auto
+			width: 100%
+			max-width: 1300px
+			.link
+				width: 45%
+				position: relative
+				display: block
+				background-color: #fff
+				padding: 35px 30px
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					bottom: 0
+					right: 0
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 0 0 15px 15px
+					border-color: transparent transparent $colorA transparent					
+				.title
+					width: 100%
+					display: block
+					text-align: left
+					margin-bottom: 20px
+					
+					h3
+						font-size: rem-calc(30)
+						color: $colorC
+						display: inline-block
+						margin-right: 20px
+						span
+							color: $colorA
+				.name
+					width: 100%
+					display: block
+					text-align: left
+					margin-bottom: 20px
+					
+
+					h3
+						font-size: rem-calc(30)
+						color: $colorC
+						display: inline-block
+						margin-right: 10px	
+						padding-left: 20px
+						position: relative
+						&:before
+							left: 0
+							top: calc(50% - 4px)
+							content: ''
+							position: absolute
+							width: 0
+							height: 0
+							border-style: solid
+							border-width: 4px 0 4px 8px
+							border-color: transparent transparent transparent $colorA					
+				.mediaList
+					width: 100%
+					display: block
+					text-align: left
+					letter-spacing: 1px
+					a
+						display: inline-block
+						vertical-align: middle
+						text-decoration: none
+						color: $colorB
+						margin-right: 10px
+						font-size: rem-calc(16)
+						line-height: rem-calc(16)
+						vertical-align: middle
+						span
+							color: $colorA
+
+						i
+							color: $colorA
+							vertical-align: middle
+							&:before
+								margin-left: 0
+								margin-right: 5px
+
+
+							
+						
+																																			
+
+
+
+
+		section.search
+			padding-top: 0
+			padding-bottom: 50px
+			width: 100%
+			max-width: 1300px
+			text-align: center
+			margin-right: auto
+			margin-left: auto
+			
+			span
+				display: inline-block		 	
+				font-size: rem-calc(20)
+				color: $colorA
+				// margin-right: 30px
+				height: 50px
+				line-height: 50px	
+				margin-right: 10px	
+			input
+				padding: 5px 8px	
+				display: inline-block
+				width: 220px
+				border: none
+				height: 40px		
 	&.literature
 		section.class
 			width: 100%
