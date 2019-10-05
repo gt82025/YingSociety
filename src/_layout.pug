@@ -13,12 +13,14 @@ html(lang='zh=TW')
   body#Style1
     .bg
         .top
-        .middleLeft
+        .BG.middleLeft#Bg1
           img(src="images/deco1_bg.png", alt="")
-        .middleRight
+        .BG.middleLeftDown#Bg2
+          img(src="images/decoGround.png", alt="")          
+        .BG.middleRight#Bg3
           img(src="images/deco2_bg.png", alt="")
-        .middleRightDown
-          img(src="images/deco3_bg.png", alt="")  
+        .BG.middleRightDown#Bg4
+          img(src="images/deco3_bg.png", alt="")           
         .bottom
           img(src="images/beach_bg.png", alt="")            
     include _header
@@ -31,6 +33,7 @@ html(lang='zh=TW')
     script(src="js/vendor/axios.min.js")
     script(src="js/vendor/userAgentChecker.min.js")
     script(src="js/vendor/clamp.min.js")
+    script(src="js/vendor/jquery.easeScroll.min.js")
     script(src="js/app.js")
     block script 
         

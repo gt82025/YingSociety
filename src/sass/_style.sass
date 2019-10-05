@@ -16,7 +16,9 @@ $xl: 1400px
 $l: 1025px	
 $m: 780px
 $s: 580px
-$xs: 400px			
+$xs: 450px		
+// *
+// 	touch-action: pan-y	
 .pc
 	display: block !important
 .mb
@@ -105,6 +107,13 @@ body
 			.bottom
 				opacity: 0.6
 				bottom: 150px	
+				position: relative
+				
+				img
+					width: 100%
+					position: relative
+					
+
 			.middleLeft
 				opacity: 0.7	
 			.middleRight
@@ -138,6 +147,18 @@ body
 			height: auto
 			top: 40%
 			left: 0
+		.middleLeftDown	
+			position: absolute
+			width: 40vw
+			height: auto
+			bottom: 5%
+			left: 0			
+			opacity: 0.3
+			img
+				position: absolute
+				width: 100%
+				left: 0
+
 		.middleRight
 			right: 0
 			position: absolute
@@ -157,7 +178,13 @@ body
 		.bottom
 			width: 100%
 			position: absolute
-			bottom: 250px			
+			bottom: 250px		
+			img
+				width: 100%
+				display: block
+				position: absolute
+				height: auto
+				bottom: 0	
 						
 
 
@@ -516,7 +543,16 @@ body
 							color: $colorA
 							background-color: #fff
 							box-shadow: 0 0 15px rgba(0,0,0,0.15)
-						
+						&:after
+							width: 25px
+							height: 1px
+							display: none
+							background-color: #8a9aa3
+							content: ''
+							left: auto 
+							right: -40%
+							top: 50%
+							position: absolute						
 						&:before
 							width: 25px
 							height: 1px
@@ -854,14 +890,17 @@ footer
 		.left
 			width: 35% 
 			margin-top: -20px
-			+fc()
+			+fc(justify-content,flex-start)
 			.webLogo
 				width: 180px
+				+fc(align-items,center)
 				i
 					color: #fff
 					font-size: rem-calc(80)
 					margin: 0
 					line-height: rem-calc(80)
+					&::before
+						margin-left: 0
 			.DirectorSaid 
 				+fc(align-items,center)
 				p
@@ -2765,6 +2804,7 @@ article.maincontent
 
 .swiper-slide
 	background-size: cover
+
 @media only screen and (max-width:$xxl)
 	body .maincontent
 		padding-right: 70px
@@ -2772,6 +2812,13 @@ article.maincontent
 	body header
 		padding-right: 70px
 		padding-left: 70px		
+	footer
+		padding-right: 30px
+		padding-left: 30px			
+	body .maincontent section.partners h2
+		color: $colorA	
+	body .maincontent section.partners h3
+		color: $colorB	
 @media only screen and (max-width:$xl)
 	body header
 		padding-right: 50px
@@ -2782,7 +2829,32 @@ article.maincontent
 	body header .mainMenu .main a
 		font-size: rem-calc(20)	
 		padding-left: 40px
+	footer .container .right menu.footer a
+		margin-bottom: 20px	
+	body .maincontent section.partners .partnersContainer
+		a
+			width: 18%
+			display: block
+			img
+				display: block	
+				width: 100%
+
 @media only screen and (max-width:$l)
+
+	.introBanner
+		height: 260px
+	article.maincontent.aboutUs .textContent section.style2 .textBox
+		width: 55%
+	article.maincontent.aboutUs .textContent section.style2 .picBox
+		width: 45%	
+	article.maincontent.aboutUs .textContent section.style1 .picBox
+		width: 45%
+	article.maincontent.aboutUs .textContent section.style1 .textBox
+		width: 55%	
+	article.maincontent.aboutUs .textContent section .textBox
+		padding-left: 8%	
+	body .bg .middleLeftDown
+		opacity: 0
 	body .maincontent .index-slider .swiper-pagination span
 		width: 10px
 		height: 10px
@@ -2803,7 +2875,7 @@ article.maincontent
 		font-size: rem-calc(15)
 		margin-bottom: 15px
 	footer .container .left .DirectorSaid
-		align-items: flex-start
+		align-items: center
 	footer .container .left .DirectorSaid p
 		font-size: rem-calc(15)
 	footer .container .left .webLogo
@@ -2820,7 +2892,7 @@ article.maincontent
 	body .maincontent section.partners h3
 		color: #8c8c8c
 	body .maincontent section
-		padding-top: 50px
+		padding-top: 80px
 		padding-bottom: 0
 	body .maincontent section.partners .partnersContainer
 		+fc(flex-wrap,wrap)
@@ -2967,6 +3039,30 @@ article.maincontent
 
 
 @media only screen and (max-width:$m)
+	.introBanner
+		height: 230px
+	article.maincontent.aboutUs .textContent section.style1 .textBox
+		padding-left: 6%
+	article.maincontent.aboutUs .textContent section.style2 .textBox
+		padding-right: 6%
+	article.maincontent.aboutUs .textContent section .textBox
+		padding-left: 6%
+	article.maincontent.aboutUs .textContent section.style1 .picBox
+		width: 40% 
+	article.maincontent.aboutUs .textContent section.style1 .textBox
+		width: 60% 		
+	article.maincontent.aboutUs .textContent section.style2 .textBox
+		width: 60%	
+	article.maincontent.aboutUs .textContent section.style2 .picBox
+		width: 40%	
+	body .bg .middleLeftDown
+		opacity: 0.3	
+		width: 120vw
+	body .maincontent section.partners .partnersContainer a.Link p
+		color: $colorB
+		text-shadow: none
+	body .maincontent section.partners .partnersContainer a.Link
+		width: 30.5%
 	body .maincontent section.literature .literatureContainer a.coverContainer p
 		font-size: rem-calc(16)
 	body .maincontent section.literature .literatureContainer a.coverContainer .head
@@ -3002,6 +3098,62 @@ article.maincontent
 	footer .container .right
 		width: 60%	
 @media only screen and (max-width:$s)
+	article.maincontent.aboutUs .textContent section .textBox
+		padding-top: 30px
+	article.maincontent.aboutUs .textContent section.style2 .picBox
+		width: 100%
+		order: -1
+	article.maincontent.aboutUs .textContent section.style2 .textBox
+		padding-right: 0
+	article.maincontent.aboutUs .textContent section.style2 .textBox
+		width: 100%
+	article.maincontent.aboutUs .textContent section
+		flex-wrap: wrap
+	article.maincontent.aboutUs .textContent section .textBox h3
+		font-size: rem-calc(30)
+		margin-bottom: 10px
+		text-align: center
+		
+	article.maincontent.aboutUs .textContent section .textBox h4
+		font-size: rem-calc(20)		
+		color: $colorC
+		text-align: center
+	article.maincontent.aboutUs .textContent section .textBox:before
+		display: none
+
+	article.maincontent.aboutUs .textContent section.style1 .textBox
+		width: 100%
+		padding-left: 0
+		padding-top: 35px
+		text-align: center
+	.introBanner .track img
+		width: 18px
+		height: auto
+	.introBanner .track a.home
+		font-size: rem-calc(15)
+	.introBanner .track
+		padding: 0 0 10px 20px
+	.introBanner h1
+		font-size: rem-calc(30)
+	.introBanner h2
+		font-size: rem-calc(20)	
+	.introBanner
+		height: 200px	
+	article.maincontent.aboutUs .textContent section
+		flex-wrap: wrap
+		padding-right: 5%
+		padding-left: 5%
+		padding-top: 0
+
+	article.maincontent.aboutUs .textContent section.style1 .picBox
+		width: 100%
+	body .bg .middleLeftDown
+		opacity: 0.4	
+		width: 140vw	
+	body .maincontent section.news a.allNews
+		margin-top: 30px
+	body .maincontent section.history .historyContent .right a.allHistory:before
+		display: block
 	body header .mainMenu
 		width: 100%
 	body .maincontent
@@ -3064,7 +3216,7 @@ article.maincontent
 		background-size: cover
 		position: relative
 	body .maincontent section.history .historyContent .right
-		padding-bottom: 80px	
+		padding-bottom: 90px	
 
 	body .maincontent section.history .historyContent .right p.year
 		top: -270px
@@ -3102,7 +3254,7 @@ article.maincontent
 	body .maincontent section.partners .partnersContainer
 		padding-top: 30px	
 	body .maincontent section
-		padding-top: 30px	
+		padding-top: 50px	
 	body .maincontent section.partners .partnersContainer a.Link p
 		color: $colorC	
 		text-shadow: none
@@ -3172,10 +3324,24 @@ article.maincontent
 		top: 38%
 		img
 			width: 100%
+	body .bg .bottom
+		bottom: 300px
+		width: 150%
+		right: 0
+	body .maincontent section.history .historyContent .right a.allHistory
+		left: calc(50% - 61px)	
+	article.maincontent.aboutUs .textContent section .textBox p
+		text-align: center
+				
+
 @media only screen and (max-width:$xs)
-
-
-
+	body .bg .bottom
+		bottom: 250px
+		width: 150%
+		right: 0
+	body .bg .middleLeft
+		width: 110vw
+		top: 50%
 
 
 
