@@ -62,12 +62,9 @@ function menuActive() {
     $touchScop.addClass('close');
   });
 }
-
 function smoothScroll(){
-
-
   $("html").easeScroll({
-    frameRate: 60,
+    frameRate: 40,
     animationTime: 800,
     stepSize: 120,
     pulseAlgorithm: !0,
@@ -79,3 +76,4 @@ function smoothScroll(){
     arrowScroll: 50
   });
 }
+

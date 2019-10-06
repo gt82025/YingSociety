@@ -11,11 +11,14 @@ html(lang='zh=TW')
     link(rel="stylesheet", href="css/vendor/swiper.min.css")
     block style
   body#Style2
+    a.goTop(href="#Style2")
+    .loaderContainer.opacity0.MoveOut
+      .loader
     .bg
         .top
-        .middleLeft
+        .middleLeft.BG
           img(src="images/deco1_bg.png", alt="")
-        .middleRight
+        .middleRight.BG
           img(src="images/deco2_bg.png", alt="")
         .bottom
           img(src="images/beach_bg.png", alt="")            
@@ -25,11 +28,12 @@ html(lang='zh=TW')
     //- script(type="text/javascript" src="js/vendor/jquery-3.2.1.min.js")
     //- script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.1/js/foundation.min.js")
     script(src="js/vendor/vue.min.js")
-    script(src="js/vendor/jquery-3.4.1.slim.min.js")
+    script(src="js/vendor/jquery-3.4.1.min.js")
     script(src="js/vendor/axios.min.js")
     script(src="js/vendor/userAgentChecker.min.js")
     script(src="js/vendor/clamp.min.js")
-    script(src="js/vendor/jquery.easeScroll.min.js")    
-    script(src="js/app.js")
+    script(src="js/vendor/jquery.easeScroll.min.js")
+    script(src="js/vendor/smooth-scroll.min.js")       
+    script(src="js/app.js") 
     block script 
         

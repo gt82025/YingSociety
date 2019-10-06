@@ -19,6 +19,56 @@ $s: 580px
 $xs: 450px		
 // *
 // 	touch-action: pan-y	
+.loaderContainer
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-color: rgba(0,0,0,0.6)
+	z-index: 9999
+	+fc(align-items,center)
+	+fc(justify-content,center)
+	transform: translateX(0vw) 
+	+ama(opacity,0.4s,0s)
+	opacity: 1	
+	.loader
+		border: 16px solid rgba(255,255,255,0.5)
+		border-top: 16px solid $colorA
+		border-radius: 50%
+		width: 120px
+		height: 120px
+		animation: spin 2s linear infinite	
+		
+	&.opacity0
+		opacity: 0
+	&.MoveOut	
+		transform: translateX(100vw)
+			
+.goTop
+	position: fixed
+	width: 40px
+	height: 40px
+	display: block
+	background-color: $colorA
+	+fc(justify-content,center)
+	+fc(align-items,center)
+	z-index: 9555
+	bottom: 10vh
+	right: 30px
+	opacity: 0.7
+	+ama(all,0.5s,0s)
+	&:after
+		display: block
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 5px 10px 5px
+		border-color: transparent transparent #fff transparent
+		content: ''
+	&:hover
+		opacity: 1	
+
 .pc
 	display: block !important
 .mb
@@ -107,7 +157,7 @@ body
 			.bottom
 				opacity: 0.6
 				bottom: 150px	
-				position: relative
+				position: absolute
 				
 				img
 					width: 100%
@@ -841,6 +891,20 @@ body
 			background-repeat: no-repeat
 			background-position: center
 			margin-bottom: 45px
+			.swiper-wrapper
+				.swiper-slide
+					div
+						position: absolute
+						width: 100%
+						height: 100%
+						background-size: cover
+						background-position: center
+						display: none	
+						z-index: 100	
+						top: 0
+						left: 0	
+							
+
 			.swiper-pagination
 				width: 100%
 				text-align: center
@@ -981,6 +1045,7 @@ footer
 		padding: 0 0 25px 30px
 		left: 0
 		bottom: 0
+		z-index: 400
 		+fc(align-items,center)
 		img
 			display: block
@@ -2306,6 +2371,13 @@ article.maincontent
 				color: #fff
 				+fc(column,d,center,center,d)
 				text-decoration: none
+				+ama(all,0.5s,0s)
+				&:hover
+					background-color: #fff
+					color: $colorA
+					box-shadow: 0 0 10px rgba(0,0,0,0.5 )
+					img
+						filter: invert(1)
 				
 				.Y
 					font-size: rem-calc(30)
@@ -2315,10 +2387,29 @@ article.maincontent
 					letter-spacing: 1px
 				img
 					margin-top: 10px
+					+ama(all,0.5s,0s)
 
 			.era
 				width: 100%
 				max-width: 1300px
+				perspective: 1500px
+				transform-style: preserve-3d
+				&:nth-child(even)
+					a.StoryContent
+						&:hover
+							-webkit-transform: rotateY(15deg)
+							-moz-transform: rotateY(15deg)
+							-ms-transform: rotateY(15deg)
+							-o-transform: rotateY(15deg)
+							transform: rotateY(15deg)
+				&:nth-child(odd)
+					a.StoryContent
+						&:hover
+							-webkit-transform: rotateY(-15deg)
+							-moz-transform: rotateY(-15deg)
+							-ms-transform: rotateY(-15deg)
+							-o-transform: rotateY(-15deg)
+							transform: rotateY(-15deg)							
 				.year
 					width: 110px
 					height: 110px
@@ -2344,6 +2435,9 @@ article.maincontent
 					padding-bottom: 20px
 					text-decoration: none
 					+fc()
+					+ama(transform,0.5s,0s)
+					
+
 					.separateLine
 						position: absolute
 						height: 90%
@@ -2690,6 +2784,14 @@ article.maincontent
 	background-color: rgba(0,0,0,0.75)
 	z-index: 500
 	+fc(column,d,center,center,d)
+	opacity: 1
+	+ama(opacity,0.5s,0s)
+	transform: translateX(0)	
+	&.op0
+		opacity: 0
+	&.moveOut
+		transform: translateX(100vw)	
+
 	.frame
 		padding: 15px
 		background-color: #fff
@@ -2706,13 +2808,13 @@ article.maincontent
 			color: $colorB
 			letter-spacing: 1px
 		img
-			max-width: 100%
+			width: 100%
 			position: relative
 			
 
 	.close
-		width: 70px
-		height: 70px
+		width: 60px
+		height: 60px
 		border-radius: 50%
 		border: #fff 2px solid 
 		margin-right: auto
@@ -2819,6 +2921,8 @@ article.maincontent
 		color: $colorA	
 	body .maincontent section.partners h3
 		color: $colorB	
+	footer .container .right menu.footer a
+		margin-bottom: 20px	
 @media only screen and (max-width:$xl)
 	body header
 		padding-right: 50px
@@ -2840,7 +2944,23 @@ article.maincontent
 				width: 100%
 
 @media only screen and (max-width:$l)
-
+	.historyContent.detail .main section.album a.popup .profile
+		opacity: 1
+		background-color: rgba(0,0,0,0)
+	.historyContent.detail .main section.album a.popup .profile .zoomBox
+		-webkit-transform: rotateY(0deg)
+		-moz-transform: rotateY(0deg)
+		-ms-transform: rotateY(0deg)
+		-o-transform: rotateY(0deg)
+		transform: rotateY(0deg)
+		width: 60px
+		height: 60px
+		line-height: 65px
+	.historyContent.detail .main section.album a.popup
+		height: 280px	
+	.historyContent.detail .main section.album a.popup .profile p
+		display: none
+					
 	.introBanner
 		height: 260px
 	article.maincontent.aboutUs .textContent section.style2 .textBox
@@ -2879,7 +2999,7 @@ article.maincontent
 	footer .container .left .DirectorSaid p
 		font-size: rem-calc(15)
 	footer .container .left .webLogo
-		width: 150px
+		width: 200px
 	footer .container .left .webLogo i
 		font-size: rem-calc(60)
 		line-height: rem-calc(60)
@@ -3039,6 +3159,25 @@ article.maincontent
 
 
 @media only screen and (max-width:$m)
+
+		
+	.historyContent.detail .main section.album a.popup .profile p
+		display: none
+	.popupContent .frame p
+		font-size: 	rem-calc(15)	
+	.historyContent.detail .main section.album a.popup
+		height: 250px
+	.historyContent.detail .main section.content h2
+	.historyContent.detail .main section.content
+		padding-left: 50px
+	.historyContent.detail .navPage a.prev
+		white-space: nowrap
+	.historyContent.detail .navPage a.next
+		white-space: nowrap		
+	body#Style2 .bg .bottom
+		bottom: 300px
+	article.maincontent.aboutUs .textContent section .textBox p
+		font-size: rem-calc(15)
 	.introBanner
 		height: 230px
 	article.maincontent.aboutUs .textContent section.style1 .textBox
@@ -3098,6 +3237,125 @@ article.maincontent
 	footer .container .right
 		width: 60%	
 @media only screen and (max-width:$s)
+	body .maincontent .index-slider .swiper-wrapper .swiper-slide div
+		display: block
+	.popupContent .frame p
+		line-height: 1.6	
+	.popupContent .close
+		width: 45px
+		height: 45px
+	.popupContent
+		padding-right: 	10px
+		padding-left: 10px	
+	.historyContent.detail .main section.album a.popup
+		width: 47.5%
+		margin-right: 	2.5%	
+	.historyContent.detail .main section.album a.popup:nth-child(even)
+		width: 47.5%
+		margin-left: 	2.5%				
+	.historyContent.detail .main section.album a.popup .profile
+		opacity: 1
+		background-color: rgba(0,0,0,0)
+	.historyContent.detail .main section.album a.popup .profile .zoomBox
+		-webkit-transform: rotateY(0deg)
+		-moz-transform: rotateY(0deg)
+		-ms-transform: rotateY(0deg)
+		-o-transform: rotateY(0deg)
+		transform: rotateY(0deg)
+		width: 50px
+		height: 50px
+		line-height: 55px
+		
+	.historyContent.detail .main section.album a.popup .profile p
+		display: none
+	.historyContent.detail .main section.album a.popup
+		height: 130px
+		margin-bottom: 20px
+	.historyContent.detail .main section.album
+		padding-right: 15px
+		padding-left: 15px
+
+	.historyContent.detail .main section.content h2
+		text-align: center
+		font-size: rem-calc(30)
+		margin-bottom: 15px
+		
+	.historyContent.detail .main section.content
+		padding-right: 15px
+		padding-left: 15px
+		width: 100%
+		padding-top: 30px
+		text-align: center
+		
+	.historyContent.detail .main
+		justify-content: center
+	.historyContent.detail .main img
+		width: calc(100% - 30px)
+	.historyContent.detail .navPage
+		padding-right: 15px 
+	.historyContent.detail .navPage
+		padding-left: 15px 		
+	.historyContent.detail .navPage .now p.Month
+		font-size: rem-calc(23)
+	.historyContent.detail .navPage .now p.Year
+		font-size: rem-calc(35)
+	.historyContent.detail .navPage a.next i:before, .historyContent.detail .navPage a.prev i:before
+		font-size: rem-calc(14)
+	.historyContent.detail .navPage a.prev
+		font-size: rem-calc(16)
+	.historyContent.detail .navPage a.next
+		font-size: rem-calc(16)		
+	article.maincontent.History .historyContent .era:nth-child(odd) .StoryContent .littleBall:before
+		left: auto
+		right: 35px
+	article.maincontent.History .historyContent .era:nth-child(odd) .StoryContent .Pic
+		text-align: left
+		padding-left: 15px
+	article.maincontent.History .historyContent .era:nth-child(odd) .StoryContent .Story
+		padding-left: 15px
+		padding-right: 60px
+	.goTop
+		bottom: 15px
+		right: 15px
+	article.maincontent.History .historyContent .era a.StoryContent .Story p
+		font-size: rem-calc(15)
+	article.maincontent.History .historyContent .era a.StoryContent .Story
+		padding-right: 60px
+	article.maincontent.History .historyContent .era a.StoryContent .Story
+		padding-top: 30px
+		padding-left: 15px
+	article.maincontent.History .historyContent .era a.StoryContent .Pic .imgContainer
+		width: 100px
+		height: 100px
+	article.maincontent.History .historyContent .era a.StoryContent .separateLine
+		position: absolute
+		right: 45px
+	article.maincontent.History .historyContent .era .year
+		width: 80px
+		height: 80px	
+	article.maincontent.History .historyContent .era a.StoryContent .littleBall
+		right: calc(45px - 7.5px)
+		left: auto
+	footer .container .left .webLogo i::before
+		margin-right: 0
+	article.maincontent.History .historyContent .era .year .Y
+		font-size: rem-calc(20)	
+	article.maincontent.History .historyContent .era .year .M
+		font-size: rem-calc(15)		
+	article.maincontent.History .historyContent .era .year
+		margin-right: 10px
+		margin-left: auto	
+	article.maincontent.History .historyContent .era a.StoryContent .Pic
+		width: 100%	
+		order: -1
+		padding-left: 15px
+	article.maincontent.History .historyContent .era a.StoryContent .Story
+		width: 100%	
+	article.maincontent.History .historyContent .era a.StoryContent
+		flex-wrap: wrap	
+	body#Style2 .bg .bottom
+		bottom: 250px
+		width: 120%	
 	article.maincontent.aboutUs .textContent section .textBox
 		padding-top: 30px
 	article.maincontent.aboutUs .textContent section.style2 .picBox
@@ -3267,12 +3525,14 @@ article.maincontent
 	footer .container .left .webLogo i
 		font-size: rem-calc(50)	
 		text-indent: -13px
+		
 	footer .container .left
 		padding-right: 10px
 		padding-left: 10px	
 	footer .container .left .webLogo
 		width: 100%
-		text-align: center
+		justify-content: center
+		
 	footer
 		padding-top: 40px	
 

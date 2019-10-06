@@ -51,9 +51,9 @@ function copyData(){
     return(
         gulp.src('src/data/*.json')    
         .pipe(plumber())
-        .pipe(jeditor({
-            'version': '1.2.3'
-          }))
+        // .pipe(jeditor({
+        //     'version': '1.2.3'
+        //   }))
         .pipe(gulp.dest('dist/data'))
         .pipe(browsersync.stream())
         .pipe(notify('copyData task Compressed!'))
@@ -168,7 +168,9 @@ function jsBuild(){
             '!src/js/**/_*.js',
             '!src/js/{vendor,lib,plugin,plugins,foundation}/**/*.*',            
             ])
-            .pipe(babel()) 
+            .pipe(babel({
+                presets: ['@babel/env']
+            })) 
             .pipe(plumber())   
             .pipe(jshint())
             .pipe(gulpIgnore.exclude('src/js/*.min.js','vendor/**/*.*'))
@@ -189,7 +191,9 @@ function jsVendor(){
             '!src/js/{vendor,lib,plugin,plugins,foundation}/**/*.min.js',
             '!src/js/{vendor,lib,plugin,plugins,foundation}/**/*-min.js'
         ])
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
 		.pipe(plumber())
 		.pipe(jshint())
 		.pipe(changed('dist/js/**/*.js'))
