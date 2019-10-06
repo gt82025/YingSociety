@@ -2077,7 +2077,7 @@ article.maincontent
 							line-height: rem-calc(16)
 					p.article
 						display: block
-						padding-top: 30px
+						padding-top: 15px
 						line-height: 1.7
 						color: $colorB 
 								
@@ -2089,6 +2089,7 @@ article.maincontent
 							display: inline-block
 							margin-right: 30px
 							position: relative
+							margin-bottom: 15px
 							&:hover
 								&:after
 									opacity: 1
@@ -2197,6 +2198,7 @@ article.maincontent
 									p
 										display: inline-block
 										vertical-align: middle
+										line-height: 1.7
 										
 									img
 										vertical-align: middle
@@ -2657,7 +2659,7 @@ article.maincontent
 				width: 46%
 				position: relative
 				display: block
-				height: 400px
+				height: 280px
 				margin-right: 8%
 				margin-bottom: 60px
 				overflow: hidden
@@ -2944,6 +2946,30 @@ article.maincontent
 				width: 100%
 
 @media only screen and (max-width:$l)
+	article.maincontent.oldMember section.reply
+		padding-top: 50px
+	article.maincontent.oldMember section.replyList
+		padding-top: 50px
+	article.maincontent.oldMember section.oldMemberContent section.main
+		padding-top: 50px
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .content h2 span
+		display: inline-block
+		width: 100%
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .content
+		padding-left: 30px
+	article.maincontent.oldMember section.oldMemberList section.List .single .right .docList li a p
+		padding-left: 5px
+		line-height: 1.7
+	article.maincontent.oldMember section.oldMemberList section.List .single .right .docList li a
+		+fc(justify-content,flex-start)
+		+fc(align-items,center)
+	article.maincontent.oldMember section.oldMemberList section.List .single .left
+		width: 73%
+	article.maincontent.oldMember section.oldMemberList section.List .single .right
+		width: 27%
+		min-width: auto
+	article.maincontent.oldMember section.oldMemberList section.List .single .right .docList
+		padding-left: 25px	
 	.historyContent.detail .main section.album a.popup .profile
 		opacity: 1
 		background-color: rgba(0,0,0,0)
@@ -3159,8 +3185,16 @@ article.maincontent
 
 
 @media only screen and (max-width:$m)
-
-		
+	body .maincontent section
+		padding-top: 50px
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .head .lastName
+		width: 100px
+		height: 100px
+		font-size: rem-calc(110)
+		line-height: 100px
+		text-indent: -20px
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .head
+		width: 100px	
 	.historyContent.detail .main section.album a.popup .profile p
 		display: none
 	.popupContent .frame p
@@ -3237,6 +3271,63 @@ article.maincontent
 	footer .container .right
 		width: 60%	
 @media only screen and (max-width:$s)
+	.pageNav
+		padding-top: 30px
+	.pageNav a.prev span,.pageNav a.next span
+		display: none
+	.pageNav a.num
+		font-size: rem-calc(15)
+		width: 30px
+		height: 30px
+		line-height: 30px
+		margin-right: 5px
+		margin-left: 5px
+	article.maincontent.oldMember section.oldMemberList section.List .single .right
+		border-bottom: none
+	article.maincontent.oldMember section.oldMemberList section.List .single .right .docList li
+		padding-bottom: 5px
+	article.maincontent.oldMember section.oldMemberList section.List .single .right .docList li a p
+		font-size: rem-calc(15)
+	article.maincontent.oldMember section.oldMemberList section.List .single .right .docList li a img
+		width: 18px
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .content p
+		font-size: rem-calc(15)
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .content
+		padding-left: 15px
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .content p
+		padding-top: 0
+		padding-right: 15px
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .content h2:after
+		display: none
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .content h2
+		padding-bottom: 15px	
+	article.maincontent.oldMember section.oldMemberList section.List
+		padding-top: 30px
+	article.maincontent.oldMember section.oldMemberList section.List .single .left
+		width: 100%
+		padding-top: 0
+		padding-bottom: 20px
+	article.maincontent.oldMember section.oldMemberList section.List .single
+		flex-wrap: wrap
+	article.maincontent.oldMember section.oldMemberList section.List .single .left .head
+		display: none
+	article.maincontent.oldMember section.oldMemberList section.List .single .right
+		width: 100%	
+		padding-top: 20px
+	article.maincontent.oldMember section.oldMemberList .toolContain label.filter::after
+		position: absolute
+		top: 16px
+		left: calc( 50% + 110px)
+	article.maincontent.oldMember section.oldMemberList .toolContain
+		flex-wrap: wrap
+	article.maincontent.oldMember section.oldMemberList .toolContain label.search
+		width: 100%
+		text-align: center
+
+	article.maincontent.oldMember section.oldMemberList .toolContain label.filter
+		text-align: center
+		width: 100%
+		padding-bottom: 25px
 	body .maincontent .index-slider .swiper-wrapper .swiper-slide div
 		display: block
 	.popupContent .frame p
@@ -3592,7 +3683,68 @@ article.maincontent
 		left: calc(50% - 61px)	
 	article.maincontent.aboutUs .textContent section .textBox p
 		text-align: center
-				
+	article.maincontent.oldMember section.oldMemberContent .profile
+		flex-wrap: wrap	
+	article.maincontent.oldMember section.oldMemberContent .profile .left
+		width: 100%		
+	article.maincontent.oldMember section.oldMemberContent .profile .left .head
+		margin-right: auto
+		margin-left: auto
+	article.maincontent.oldMember section.oldMemberContent .profile .right
+		width: 100%
+		padding-left: 15px
+		padding-top: 30px
+		padding-right: 15px	
+	article.maincontent.oldMember section.oldMemberContent .profile .right h2:before
+		display: none
+	article.maincontent.oldMember section.oldMemberContent .profile .right .downloadBox
+		padding-top: 0			
+	article.maincontent.oldMember section.oldMemberContent .profile .right .downloadBox a
+		width: 50%
+		padding-right: 7px
+		margin-right: 0
+		margin-bottom: 15px
+		position: relative
+		&:nth-child(even)
+			padding-left: 7px
+			padding-right: 0
+		span
+			display: inline-block
+			width: calc(100% - 30px)
+			line-height: 1.6
+			font-size: rem-calc(15)
+	article.maincontent.oldMember section.oldMemberContent .profile .right p.article
+		text-align: center
+		font-size: rem-calc(15)	
+	article.maincontent.oldMember section.oldMemberContent section.main p
+		padding-right: 15px
+		padding-left: 15px
+		font-size: rem-calc(15)				
+	article.maincontent.oldMember section.replyList
+		padding-right: 15px
+		padding-left: 15px		
+	article.maincontent.oldMember section.oldMemberContent section.main p:last-child
+		padding-bottom: 30px	
+	article.maincontent.oldMember section.replyList
+		padding-top: 30px	
+	article.maincontent.oldMember section.reply
+		padding-right: 15px
+		padding-top: 30px
+		padding-left: 15px	
+	article.maincontent.oldMember section.reply .myDetial
+		text-align: center
+	article.maincontent.oldMember section.reply .textBox
+		padding-top: 15px			
+	article.maincontent.oldMember section.reply .textBox .submitBox img
+		width: 95px
+		height: auto
+	article.maincontent.oldMember section.reply .textBox .submitBox button.submit
+		margin-right: auto
+		margin-left: auto
+		display: block
+		margin-top: 15px
+						
+
 
 @media only screen and (max-width:$xs)
 	body .bg .bottom

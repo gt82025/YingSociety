@@ -19,7 +19,7 @@ block script
             var TimeOutID = window.setTimeout(function() {
                 loadMoreStory();
                 window.clearTimeout(TimeOutID);
-            }, 600)
+            }, 400)
         }
     }
     });
@@ -86,7 +86,7 @@ block script
         $loadingScreen.addClass('MoveOut');
         $windowHeight = $(window).height();
         $docHeight = $(document).height();
-        var scrollTopBack = $(window).scrollTop() - 600;
+        var scrollTopBack = $(window).scrollTop() - 800;
         $(window).scrollTop(scrollTopBack);
         $('.moreStory').on("click", function() {
             loadMoreStory();
