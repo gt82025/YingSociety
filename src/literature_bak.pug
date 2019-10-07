@@ -1,0 +1,91 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 關於我們
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript" src="js/literature.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  article.maincontent.literature.inside
+    .introBanner(style="background-image:url(images/banner-literature.png)")
+      h1 文獻
+      h2 literature
+      .track
+        img(src="images/home.png", alt="")
+        a.home(href="#") 首頁
+        a.now 文獻
+    section.class 
+      span 分類 : 
+      a.className(href="javascript:;").active 總輯
+      a.className(href="javascript:;") 別輯
+      a.className(href="javascript:;") 刊物
+      a.className(href="javascript:;") 論文
+      a.className(href="javascript:;") 藏書
+    section.search
+      label
+        span 搜尋 : 
+        input(type="text" placeholder="請輸入關鍵字").phColor
+    section.list
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺  
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺  
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺              
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺          
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺        
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺  
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺  
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺              
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺          
+      a(href="literasture_author.html")
+        .box
+          p 翁
+        span 翁螺
+    section.pageNavContent
+      .pageNav
+        a.prev(href="#") 
+          i.be-icon.be-icon-arrowLeft 
+          span 上一頁
+        a.num.active(href="#") 1
+        a.num(href="#") 2
+        a.num(href="#") 3
+        a.num(href="#") 4
+        a.num(href="#") 5
+        span ...
+        a.num(href="#") 20
+        a.num(href="#") 21
+        a.next(href="#") 
+          span 下一頁
+          i.be-icon.be-icon-arrowRight        
+             

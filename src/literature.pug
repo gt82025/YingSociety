@@ -7,8 +7,7 @@ block style
 
 block script
   //- script(type="text/javascript" src="js/index.min.js")
-  script(type="text/javascript" src="js/vendor/swiper.min.js")
-  script(type="text/javascript" src="js/index.js")
+  script(type="text/javascript" src="js/literature.js")
   script(type="text/javascript").
     console.log('haha')
 
@@ -23,56 +22,56 @@ block content
         a.now 文獻
     section.class 
       span 分類 : 
-      a.className(href="#").active 總輯
-      a.className(href="#") 別輯
-      a.className(href="#") 刊物
-      a.className(href="#") 論文
-      a.className(href="#") 藏書
-    section.search
+      a.className(href="javascript:;").active 總輯
+      a.className(href="javascript:;") 別輯
+      a.className(href="javascript:;") 刊物
+      a.className(href="javascript:;") 論文
+      a.className(href="javascript:;") 藏書
+    section.search.style2
       label
         span 搜尋 : 
         input(type="text" placeholder="請輸入關鍵字").phColor
     section.list
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺  
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺  
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺              
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺          
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺        
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺  
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺  
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺              
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺          
-      a(href="#")
-        .box
-          p 翁
-        span 翁螺
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 黃
+            img(src="images/oldMember3.png", alt="")  
+          h2.name 黃梅樹   
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 黃
+            img(src="", alt="")  
+          h2.name 黃梅樹    
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 黃
+            img(src="images/oldMember3.png", alt="")  
+          h2.name 黃梅樹  
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 黃
+            img(src="images/oldMember3.png", alt="")  
+          h2.name 黃梅樹   
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 謝
+            img(src="", alt="")  
+          h2.name 黃梅樹    
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 黃
+            img(src="images/oldMember3.png", alt="")  
+          h2.name 黃梅樹              
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 黃
+            img(src="images/oldMember3.png", alt="")  
+          h2.name 黃梅樹
+        a(href="literasture_author.html").style2
+          .picContainer
+            p.lastName 黃
+            img(src="images/oldMember3.png", alt="")  
+          h2.name 黃梅樹                                          
     section.pageNavContent
       .pageNav
         a.prev(href="#") 

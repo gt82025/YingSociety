@@ -165,9 +165,9 @@ body
 					
 
 			.middleLeft
-				opacity: 0.7	
+				opacity: 0.5	
 			.middleRight
-				opacity: 0.7	
+				opacity: 0.5	
 
 
 
@@ -1274,6 +1274,9 @@ article.maincontent
 			text-align: center
 			margin-right: auto
 			margin-left: auto
+			&.style2
+				padding-bottom: 20px	
+
 			
 			span
 				display: inline-block		 	
@@ -1305,6 +1308,78 @@ article.maincontent
 			margin-left: auto
 			// +fc(justify-content,space-between)
 			+fc(flex-wrap,wrap)
+			a.style2
+				position: relative
+				width: 20%
+				background-color: rgba(255,255,255,0)
+				height: auto
+				margin-right: 0 !important
+				padding-top: 30px	
+				+ama(all,0.5s,0s)
+				padding-bottom: 10px
+
+				&:before
+					display: none
+						
+				&:after
+					width: 0
+					position: absolute
+					left: 50%
+					bottom: 0
+					content: ''
+					height: 2px
+					background-color: $colorA
+					opacity: 0.2
+					display: block
+					+ama(all,0.5s,0s)
+					
+				&:hover
+					padding-top: 15px
+					&:after
+						width: 	100%
+						opacity: 0.2	
+						left: 0
+
+							
+					 		 		 		 	
+				h2.name
+					font-size: rem-calc(30) 
+					line-height: rem-calc(30) 	
+					position: relative
+							
+
+
+				.picContainer
+					width: 120px
+					height: 120px
+					border-radius: 50%
+					background-color: #fff	
+					box-shadow: 0 0 22px rgba(0,0,0,0.15)
+					position: relative
+					overflow: hidden
+					margin-right: auto
+					margin-left: auto
+					margin-bottom: 	30px
+					line-height: 125px
+					font-size: rem-calc(145)
+					color: $colorA
+					text-indent: -30px
+
+								
+					p.lastName
+						opacity: 0.1	
+						font-weight: lighter
+
+					img	
+						width: 100%
+						height: auto
+						position: absolute
+						z-index: 10
+						top: 0
+						left: 0
+						
+
+
 			a
 				display: block
 				background-color: #fff
@@ -1314,7 +1389,8 @@ article.maincontent
 				text-decoration: none
 				position: relative
 				overflow: hidden
-				margin-bottom: 30px	
+				margin-bottom: 30px
+
 				&:nth-child(4n+4) 
 					margin-right: 0
 				&:hover
@@ -1439,6 +1515,10 @@ article.maincontent
 					background-repeat: no-repeat
 					float: left
 					letter-spacing: 1px
+					i
+						font-size: rem-calc(15)
+						&::before
+							color: $colorC
 				.data
 					float: right
 					display: inline-block
@@ -1730,6 +1810,7 @@ article.maincontent
 							position: relative
 							letter-spacing: 1px
 							margin-right: 10px
+							margin-bottom: 15px
 							span
 								color: $colorA	
 							&:before
@@ -1782,6 +1863,7 @@ article.maincontent
 							display: inline-block
 							margin-right: 30px
 							position: relative
+							margin-bottom: 15px
 							&:hover
 								&:after
 									opacity: 1
@@ -1811,22 +1893,6 @@ article.maincontent
 								height: auto
 								margin-right: 10px
 								vertical-align: middle		
-
-					
-				
-
-
-					
-
-				 		 		
-
-
-
-						
-
-
-
-
 
 	&.oldMember	
 		section.reply
@@ -2010,18 +2076,19 @@ article.maincontent
 
 			.profile
 				width: 100%
-				padding-top: 40px
+				padding-top: 0
 				padding-bottom: 40px
 				+fc()
 				border-bottom: $colorD 3px solid
 				.left
-					width: 140px
+					width: 180px
 					position: relative
+					padding-right: 40px
 					.head
 						width: 140px
 						position: relative
 						height: 140px
-						background-color: $colorA
+						background-color: #fff
 						border-radius: 50%
 						overflow: hidden
 						font-size: rem-calc(150)
@@ -2032,8 +2099,9 @@ article.maincontent
 						border: 1px solid #fff
 						box-shadow: 0 0 30px rgba(0,0,0,0.3)
 						p
-							opacity: 0.7
+							opacity: 0.2
 							position: relative
+							color: $colorA
 							
 						img
 							position: absolute
@@ -2049,8 +2117,7 @@ article.maincontent
 
 						
 				.right
-					width: calc(100% - 140px)
-					padding-left: 40px
+					width: 100%
 					h2 
 						font-size: rem-calc(40)
 						color: $colorA
@@ -2299,7 +2366,7 @@ article.maincontent
 					display: block
 					text-align: left
 					position: relative
-					margin-right: 10px
+					margin-right: 0
 					&::after
 						position: absolute
 						display: block
@@ -2337,7 +2404,7 @@ article.maincontent
 						option
 							padding: 10px
 				label.search
-					margin-left: 20px
+					margin-left: 0
 					input
 						width: 200px
 						height: 40px
@@ -2946,6 +3013,10 @@ article.maincontent
 				width: 100%
 
 @media only screen and (max-width:$l)
+	article.maincontent.literature section.reply
+		padding-top: 35px
+	article.maincontent.literature section.literatureContent .profile
+		padding-top: 0
 	article.maincontent.oldMember section.reply
 		padding-top: 50px
 	article.maincontent.oldMember section.replyList
@@ -3038,7 +3109,7 @@ article.maincontent
 	body .maincontent section.partners h3
 		color: #8c8c8c
 	body .maincontent section
-		padding-top: 80px
+		padding-top: 30px
 		padding-bottom: 0
 	body .maincontent section.partners .partnersContainer
 		+fc(flex-wrap,wrap)
@@ -3180,13 +3251,40 @@ article.maincontent
 					top: 0
 					left: 0	
 					width: 80% 
+	article.maincontent.literature section.bookList
+		padding-top: 50px				
 
 		
 
 
 @media only screen and (max-width:$m)
+	article.maincontent.literature section.list a.style2 h2.name
+		font-size: 	rem-calc(25)
+	article.maincontent.literature section.list a.style2
+		width: 25%	
+	article.maincontent.literature section.list
+		padding-right: 15px
+		padding-left: 15px
+	article.maincontent.literature section.class a.className
+		font-size: rem-calc(16)
+		margin-right: 10px
+		margin-left: 10px
+		padding-right: 12px
+		padding-left: 12px
+		height: 40px
+		line-height: 40px
+	article.maincontent.literature section.search
+		padding-bottom: 25px
+	article.maincontent.literature section.class span
+		font-size: rem-calc(15)
+	article.maincontent.literature section.class
+		padding-bottom: 20px
+	article.maincontent.literature section.class a.className
+		margin-bottom: 20px
+	article.maincontent.literature section.class
+		flex-wrap: wrap
 	body .maincontent section
-		padding-top: 50px
+		padding-top: 0
 	article.maincontent.oldMember section.oldMemberList section.List .single .left .head .lastName
 		width: 100px
 		height: 100px
@@ -3270,7 +3368,151 @@ article.maincontent
 		width: 40%	
 	footer .container .right
 		width: 60%	
+	article.maincontent.literature section.list a
+		width: 31%
+		margin-right: 3.5%
+	article.maincontent.literature section.list a:nth-child(4n+4)
+		margin-right: 3.5%
+	article.maincontent.literature section.list a:nth-child(3n+3)	
+		margin-right: 0
+	article.maincontent.oldMember section.reply .myDetial
+		padding-top: 20px		
+
 @media only screen and (max-width:$s)
+	article.maincontent.literature section.list a.style2
+		width: 50% 
+		padding-top: 10px
+		margin-bottom: 10px		
+	article.maincontent.literature section.literatureContent .profile .right .copyright p:before
+		display: none
+					
+	article.maincontent.literature section.literatureContent .profile .right .copyright p
+		width: 46%
+		margin-right: 2%	
+		padding-left: 0	
+		color: $colorB
+		padding: 0	
+		text-shadow: 0 0 20px rgba(255,255,255,0.5)
+		span
+			text-shadow: 0 0 20px rgba(255,255,255,0.5)
+		&:nth-child(2n+2)
+			margin-left: 2%
+			width: 46%	
+			margin-right: 0	
+		&:last-child
+			width: 100%	
+			margin-left: 0	
+			text-align: center
+						
+
+
+
+
+	article.maincontent.literature section.literatureContent .profile .right h2
+		width: 100%
+		font-size: rem-calc(32)
+
+	article.maincontent.literature section.literatureContent .profile .right .otherLink .linkBox
+		padding-top: 20px
+	article.maincontent.literature section.bookList .listContent .downloadBox .left a.download
+		width: 100%
+		padding-bottom: 15px
+		height: auto
+		font-size: rem-calc(15)
+		background-size: auto 25px
+		padding-right: 0
+		padding-left: 28px
+		background-position: 0 3px
+	article.maincontent.literature section.bookList .listContent .downloadBox .right span
+		height: auto
+		display: block
+		text-align: left	
+		width: 100%
+		padding-top: 0
+		position: relative
+	article.maincontent.literature section.literatureContent .profile .right .copyright
+		padding-top: 0
+	article.maincontent.literature section.bookList .listContent .downloadBox .left
+		width: 100%
+	article.maincontent.literature section.bookList .listContent .downloadBox .right
+		width: 100%		
+	article.maincontent.literature section.bookList .listContent .downloadBox
+		padding-top: 15px
+		flex-wrap: wrap
+	article.maincontent.literature section.bookList .listContent a.title
+		width: 100%
+	article.maincontent.literature section.bookList .listContent .data
+		width: 100%	
+		padding-top: 15px
+		padding-bottom: 15px
+	article.maincontent.literature section.bookList .listContent
+		padding: 15px
+	article.maincontent.literature section.bookList
+		padding-right: 15px
+		padding-left: 15px
+		padding-top: 30px
+	article.maincontent.literature section.literatureContent .profile .right .downloadBox
+		padding-top: 0
+	article.maincontent.literature section.literatureContent .profile .right h2:before
+		display: none
+	article.maincontent.literature section.literatureContent .profile .right p.article
+		text-align: center
+		font-size: rem-calc(15)
+	article.maincontent.literature section.literatureContent .profile .right .downloadBox a img
+		width: 18px
+	article.maincontent.literature section.literatureContent
+		padding-right: 15px	
+		padding-left: 15px		
+
+	article.maincontent.literature section.literatureContent .profile .right .downloadBox a span
+		display: inline-block
+		width: calc(100% - 30px)
+		position: relative
+		font-size: rem-calc(15)
+		line-height: 1.6
+	article.maincontent.literature section.replyList
+		padding-right: 15px
+		padding-left: 15px	
+		padding-top: 30px			
+	article.maincontent.literature section.literatureContent .profile .right .downloadBox.detail
+		padding-top: 15px
+		margin-top: 15px	
+		border-top: $colorC 1px dotted	
+		border-bottom: $colorC 1px dotted	
+
+	article.maincontent.literature section.literatureContent .profile .right .downloadBox a
+		width: 48%
+		margin-right: 4%
+		&:nth-child(2n+2)
+			margin-right: 0
+	article.maincontent.literature section.literatureContent .profile .right
+		width: 100%
+		padding-top: 15px
+		padding-right: 0
+		padding-left: 0
+	article.maincontent.literature section.literatureContent .profile .left .head
+		margin-right: auto
+		margin-left: auto
+	article.maincontent.literature section.literatureContent .profile
+		flex-wrap: wrap
+		padding-top: 0
+	article.maincontent.literature section.literatureContent .profile .left
+		width: 100%
+
+	article.maincontent.literature section.list a .box
+		top: -15%
+	article.maincontent.literature section.list a span
+		font-size: rem-calc(22)
+		bottom: 15px
+	article.maincontent.literature section.list a
+		height: 120px
+	article.maincontent.literature section.list a:nth-child(3n+3)
+		margin-right: 4%	
+	article.maincontent.literature section.list a
+		width: 48%
+		margin-right: 4%	
+	article.maincontent.literature section.list a:nth-child(2n+2)
+		margin-right: 0
 	.pageNav
 		padding-top: 30px
 	.pageNav a.prev span,.pageNav a.next span
@@ -3687,6 +3929,7 @@ article.maincontent
 		flex-wrap: wrap	
 	article.maincontent.oldMember section.oldMemberContent .profile .left
 		width: 100%		
+		padding-right: 0
 	article.maincontent.oldMember section.oldMemberContent .profile .left .head
 		margin-right: auto
 		margin-left: auto
@@ -3743,6 +3986,25 @@ article.maincontent
 		margin-left: auto
 		display: block
 		margin-top: 15px
+	article.maincontent.literature section.reply.detail
+		padding-right: 15px	
+		padding-left: 15px	
+	article.maincontent.literature section.reply .textBox .submitBox img
+		width: 95px
+		height: auto	
+	article.maincontent.literature section.reply .textBox .submitBox button.submit
+		margin-right: auto
+		margin-left: auto
+		margin-top: 15px		
+		display: block
+	article.maincontent.literature section.literatureContent .profile .right h2 span
+		margin-left: 0	
+		width: 100%
+		text-align: center
+	article.maincontent.oldMember section.reply .myDetial
+		padding-top: 20px		
+					
+							
 						
 
 
