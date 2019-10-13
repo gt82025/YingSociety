@@ -1,0 +1,22 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 關於我們
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  .loginContent
+    .title
+      h1 登入 / 註冊
+      h2.login Login / registered
+    .loginBoard.completed
+        img.completed(src="images/unlock.png", alt="")
+        p.completed 帳號已驗證成功，需待審核人員審核後<br>才能開通進行登入
+       
+

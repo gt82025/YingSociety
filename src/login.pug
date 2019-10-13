@@ -1,0 +1,147 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 關於我們
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  script(type="text/javascript" src="js/login.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  .popup.popupContent.terms.moveOut.op0
+    .close#close
+    article.termsContent
+      h3 使用條款
+      h4 Terms of use
+      section.main
+        h3 一、認知與接受條款
+        p 1.博客來數位科技股份有限公司(以下簡稱「博客來」)係依據本服務條款提供博客來（http://www.books.com.tw）服務 (以下簡稱「本服務」)。當會員完成博客來之會員註冊手續、或開始使用本服務時，即表示已閱讀、瞭解並同意接受本服務條款之所有內容，並完全接受本服務現有與未來衍生的服務項目及內容。博客來公司有權於任何時間修改或變更本服務條款之內容，修改後的服務條款內容將公佈網站上，博客來將不會個別通知會員，建議會員隨時注意該等修改或變更。會員於任何修改或變更後繼續使用本服務時，視為會員已閱讀、瞭解並同意接受該等修改或變更。若不同意上述的服務條款修訂或更新方式，或不接受本服務條款的其他任一約定，會員應立即停止使用本服務。
+        p 2.若會員為未滿二十歲之未成年人，應於會員的家長（或監護人）閱讀、瞭解並同意本約定書之所有內容及其後修改變更後，方得註冊為會員、使用或繼續使用本服務。當會員使用或繼續使用博客來時，即推定會員的家長（或監護人）已閱讀、瞭解並同意接受本約定書之所有內容及其後修改變更。
+        p 3.會員及博客來雙方同意使用本服務之所有內容包括意思表示等，以電子文件作為表示方式。
+        h3 二、會員的註冊義務
+        p 為了能使用本服務，會員同意以下事項：
+        ul
+          li 依本服務註冊表之提示提供會員本人正確、最新的資料，且不得以第三人之名義註冊為會員。每位會員僅能註冊登錄一個帳號，不可重覆註冊登錄。
+          li 即時維持並更新會員個人資料，確保其正確性，以獲取最佳之服務。
+          li 若會員提供任何錯誤或不實的資料、或未按指示提供資料、或欠缺必要之資料、或有重覆註冊帳號等情事時，博客來有權不經事先通知，逕行暫停或終止會員的帳號，並拒絕會員使用本服務之全部或一部。
+          li 關於會員的註冊以及其他特定資料依博客來「隱私權政策」受到保護與規範。
+          li 會員的密碼或帳號<a href="#">遭到</a>盜用或有其他任何安全問題發生時，會員將立即通知博客來
+        h3 二、會員的註冊義務
+        p 為了能使用本服務，會員同意以下事項：
+        ul
+          li 依本服務註冊表之提示提供會員本人正確、最新的資料，且不得以第三人之名義註冊為會員。每位會員僅能註冊登錄一個帳號，不可重覆註冊登錄。
+          li 即時維持並更新會員個人資料，確保其正確性，以獲取最佳之服務。
+          li 若會員提供任何錯誤或不實的資料、或未按指示提供資料、或欠缺必要之資料、或有重覆註冊帳號等情事時，博客來有權不經事先通知，逕行暫停或終止會員的帳號，並拒絕會員使用本服務之全部或一部。
+          li 關於會員的註冊以及其他特定資料依博客來「隱私權政策」受到保護與規範。
+          li 會員的密碼或帳號<a href="#">遭到</a>盜用或有其他任何安全問題發生時，會員將立即通知博客來
+
+  .loginContent
+    .title
+      h1 登入 / 註冊
+      h2.login Login / registered
+    .loginBoard
+
+      .tab#tabBox
+        a(href="javascript:;").active#loginTab 會員登入
+        a(href="javascript:;")#registerTab 會員註冊
+      .loginBox  
+        p.notice 請輸入您的新密碼，<br>密碼須滿足最少包含8位元英文數字之字串
+        img.avatar(src="images/Avatar.png", alt="")
+        form
+          label.dis(for="email") <i>*</i> 請輸入帳號(E-mail)  
+          input(type="email", name="email",placeholder="")
+          p.error 
+          label.dis(for="Password") <i>*</i> 請輸入密碼
+          input(type="password", name="Password",placeholder="").error
+          p.error 密碼錯誤   
+          button(type="submit",).submit 登入    
+          .linkContent
+            a(href="forgotPw.html").link 忘記密碼
+            a(href="javascript:;").link.joinMember <p>還沒加入會員嗎？</p>加入會員
+      .registeredBox
+        br
+        form.register
+          p.notice 已經有帳號了? 
+            a(href="javascript:;").loginNow 會員登入
+          p.need <i>*</i> 為必填欄位
+          label.dis(for="class") <i>*</i> 請選擇您的會員類型
+          p.radioBox <input type="radio" name="class">
+            span 一般網路會員
+            input(type="radio" name="gender") 
+            span 社員
+          p.error 此欄位為必填   
+          label.dis(for="TypeEmail") <i>*</i> 帳號(E-mail) 
+          input(type="email", name="TypeEmail",placeholder="請輸入正確且可正常使用的E-mail")
+          ul.notice
+            li 註冊時需要驗證E-mail，請務必填寫正確的E-mail，提交後請及時查收郵件。
+            li 點擊「立即註冊」後需要等待幾分鐘才能收到郵件，如果收信匣沒有，請檢查一下垃圾信件匣。
+          .gap
+          label.dis(for="Password") <i>*</i> 請輸入密碼
+          input(type="password", name="Password",placeholder="請輸入密碼(至少需輸入5位數字或英文字母) ")    
+          p.error             
+          label.dis(for="PasswordAgain") <i>*</i> 再次輸入密碼
+          input(type="password", name="PasswordAgain",placeholder="請再次輸入密碼")    
+          p.error              
+          label.dis(for="MemberName") <i>*</i> 會員姓名
+          input(type="password", name="MemberName",placeholder="請輸入您的真實姓名") 
+          p.error   
+          label.dis(for="gender") <i>*</i> 性別
+          p.radioBox <input type="radio" name="gender">
+            span 男
+            input(type="radio" name="gender") 
+            span 女
+          p.error             
+          label.dis(for="personalLink") 個人連結（一）
+          input(type="password", name="personalLink",placeholder="請輸入http:// 或 https:// 開頭的連結字串 ")            
+          p.error             
+          label.dis(for="personalLink") 個人連結（二）
+          input(type="password", name="personalLink",placeholder="請輸入http:// 或 https:// 開頭的連結字串 ")                              
+          p.error              
+          label.dis(for="phone") 電話
+          input(type="password", name="phone",placeholder="請輸入正確格式之電話號碼,如(02)22005555")               
+          p.error             
+          label.dis(for="fox") 傳真
+          input(type="password", name="fox",placeholder="請輸入正確格式之傳真號碼,如(02)22005555")             
+          p.error              
+          label.dis(for="sellPhone") <i>*</i> 手機
+          input(type="password", name="sellPhone",placeholder="請輸入正確格式之號碼,如0955336225")          
+          p.error             
+          label.dis(for="address") <i>*</i> 通訊地址
+          .selectContainer    
+            select.country(name="address").error
+              option(value="") 地區/國家
+              option(value="") 台灣
+              option(value="") 中國
+              option(value="") 日本       
+            select.city(name="address").error
+              option(value="") 城市/地區
+              option(value="") 地區/國家 
+              option(value="") 地區/國家 
+              option(value="") 地區/國家                                   
+          input(type="password", name="address",placeholder="請輸入詳細街道地址").error        
+          p.error 此欄位為避填        
+          label.dis(for="lineId") LINE ID
+          input(type="password", name="lineId",placeholder="請輸入您的line ID")
+          .gap 
+          label.dis(for="education") 學歷
+          textarea.Education(type="password", name="education",placeholder="請輸入您的最高學歷")
+          .gap 
+          label.dis(for="experience") 經歷
+          textarea.Experience(name="experience",placeholder="請簡單的描述您的經歷")
+          .gap 
+          label.dis(for="Job") 現職
+          input(type="password", name="Job",placeholder="請輸入您的line ID")
+          .gap 
+          label.dis(for="expertise") 專長
+          textarea.Experience(name="expertise",placeholder="請簡單描寫您的特長")
+          .gap 
+          label.confirm
+          p.notice 
+            input(type="checkbox") 
+            span 我已詳細閱讀並同意網站<a href="javascript:;" id="Terms">服務使用條款</a>
+          button.submit(type="submit") 立即註冊  
+
+

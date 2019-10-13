@@ -1,0 +1,32 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 關於我們
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  .loginContent
+    .title
+      h1 忘記密碼
+      h2.login Forget Password
+    .loginBoard.forgotPw
+      .loginBox  
+        img.forgotPw(src="images/forgotPw.png", alt="")
+        p.notice.forgotPw 請輸入您的會員註冊帳號，<br>系統將發送重設密碼變更信至您的註冊信箱
+        br
+        br
+        form
+          label.dis(for="email") <i>*</i> 會員帳號（E-mail）
+          input(type="email", name="email",placeholder="請輸入您的會員註冊帳號")
+          p.error 
+          button(type="submit",).submit.forgotPw 確認送出    
+          .linkContent
+            a(href="#").link 返回登入頁面
+  
+      

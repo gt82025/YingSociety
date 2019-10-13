@@ -18,7 +18,26 @@ $m: 780px
 $s: 580px
 $xs: 450px		
 // *
-// 	touch-action: pan-y	
+// 	touch-action: pan-y
+.clearBoth
+	width: 100%
+	clear: both
+
+p.error
+	font-size: rem-calc(15)
+	color: red
+	display: block
+	padding-top: 10px
+	width: 100%
+	letter-spacing: 1px
+	padding-bottom: 5px
+input,textarea
+	&::-webkit-input-placeholder 
+		color: #a8a8a8
+	&::-moz-placeholder	
+		color: #a8a8a8
+	&::-moz-placeholder
+		color: #a8a8a8
 .loaderContainer
 	position: fixed
 	width: 100%
@@ -158,20 +177,18 @@ body
 				opacity: 0.6
 				bottom: 150px	
 				position: absolute
-				
 				img
 					width: 100%
 					position: relative
-					
-
+		&.news
+			.bg
+				.bottom
+					bottom: 120px
+					opacity: 0.3
 			.middleLeft
 				opacity: 0.5	
 			.middleRight
 				opacity: 0.5	
-
-
-
-
 	.bg
 		width: 100%
 		position: absolute
@@ -191,6 +208,7 @@ body
 			height: 1300px
 			background-position: top center
 			background-repeat: no-repeat 
+			opacity: 0.8
 		.middleLeft	
 			position: absolute
 			width: 35vw
@@ -313,6 +331,11 @@ body
 						position: absolute
 						left: 25px
 						top: calc(50% - 2px)
+						+ama(all,0.5s,0s)
+					&:hover
+						&:before
+							left: 32px
+							
 			.sub
 				width: auto
 				height: 40px
@@ -378,7 +401,324 @@ body
 					&:nth-child(2)
 						&:before
 							display: none
+	.loginContent
+		width: 100%		
+		min-height: 90vh
+		padding-top: 150px	
+		position: relative
+		z-index: 99
+		.loginBoard.forgotPw
+			width: 500px
+			flex-wrap: wrap
+			height: auto		
+		.loginBoard.completed
+			width: 500px
+			flex-wrap: wrap
+			height: 450px
+			+fc(justify-content,center)
+			align-items: center
+			align-content: center
+			a
+				color: $colorA
+				text-decoration: underline
+		.loginBoard,.registered
+			background-color: #fff
+			padding: 30px 60px
+			max-width: 700px
+			margin-right: auto
+			margin-left: auto
+			margin-top: 30px
+			margin-bottom: 150px
+			padding-bottom: 50px
+			.need
+				padding-top: 15px
+				padding-bottom: 15px
+				color: $colorA
+				font-size: rem-calc(16)
+				i
+					color: red
+			.notice
+				display: block
+				padding-top: 50px
+				text-align: center
+				color: $colorC
+				font-size: rem-calc(16)
+				line-height: 1.6
+				&.forgotPw
+					padding-top: 0
+					letter-spacing: 1px
+				a
+					color: $colorA
+					text-decoration: underline
+	
+			img.avatar
+				margin-top: 30px
+				margin-right: auto
+				margin-left: auto
+				display: block
+				margin-bottom: 30px
+			img.completed,img.forgotPw		
+				margin-top: 30px
+				margin-right: auto
+				margin-left: auto
+				display: block
+				margin-bottom: 30px
+				width: 80px
+				height: auto
+			p.completed
+				width: 100%
+				text-align: center
+				color: $colorA
+				line-height: 1.6
+				font-size: rem-calc(28)
+				letter-spacing: 1px
+
+
+			form
+				display: block
+				margin-right: auto
+				margin-left: auto
+				max-width: 450px
+				&.register
+					max-width: 480px 
+				.submit
+					width: 150px
+					height: 45px
+					background-color: $colorA
+					text-align: center
+					line-height: 45px
+					color: #fff
+					border: none
+					margin-right: auto
+					margin-left: auto
+					margin-top: 35px
+					display: block
+					&.forgotPw
+						margin-top: 20px
+				.gap
+					width: 100%
+					height: 22px
+				.notice
+					display: block
+					margin: 0
+					width: 	100%
+					height: auto
+					padding-top: 5px
+					padding-bottom: 5px	
+					position: relative
+					
+
+					li
+						position: relative
+						text-align: left
+						display: block
+						padding-left: 25px
+						color: $colorA
+						letter-spacing: 1px
+						&::before
+							content: '※'
+							display: inline-block
+							position: absolute
+							left: 0
+							font-size: rem-calc(16)
+				.selectContainer
+					width: 100%
+					padding-top: 10px
+					padding-bottom: 10px
+					select
+						display: inline-block
+						appearance: none
+						-webkit-appearance: none
+						margin-left: 0
+						margin-right: 15px
+						border: none
+						height: 40px
+						line-height: 40px
+						padding-left: 20px
+						padding-right: 20px
+						letter-spacing: 1px
+						background-color: #5d85a4
+						color: #fff
+						padding-right: 30px
+						font-size: rem-calc(16)
+						position: relative
+						cursor: pointer
+						+ama(all,0.5s,0s)
+						width: 40%
+						background-image: url(../images/arrowDown.png)
+						background-repeat: no-repeat
+						background-position: 93% 18px
+						&.error
+							border: 1px solid red
+						
 							
+						option
+							padding: 10px	
+						&:hover
+							background-color: $colorA
+												
+
+
+
+				textarea.Education,textarea.Experience
+					width: 100%
+					height: 100px
+					padding: 8px 0
+					font-size: rem-calc(16)
+					border: none
+					+ama(all,0.5s,0s)
+					border-bottom: 1px solid $colorD
+					&:focus
+						border-bottom: 1px solid $colorA
+						outline: none
+				label.dis
+					display: block
+					padding-top: 10px
+					padding-bottom: 10px
+					font-size: rem-calc(16)
+					color: $colorB
+					letter-spacing: 1px
+					i
+						color: red
+				input
+					width: 100%
+					height: 40px
+					border: none
+					border-bottom: 1px solid $colorD
+					padding: 5px 12px
+					font-size: rem-calc(16)
+					color: $colorA	
+					padding-left: 0
+					+ama(all,0.5s,0s)
+					letter-spacing: 1px
+					&.error
+						border-bottom: 1px solid red
+					&:focus
+						border-bottom: 1px solid $colorA
+						outline: none
+				p.notice		
+					text-align: center
+					letter-spacing: 1px
+					color: $colorC
+					letter-spacing: 1px
+					input[type="checkbox"]		
+						width: 15px
+						height: 15px
+						line-height: 1
+						display: inline-block
+						vertical-align: middle
+						margin-right: 10px				
+				p.radioBox
+					width: 100%
+					padding-top: 15px
+					padding-bottom: 15px	
+					display: block
+					input[type="radio"]
+						width: 15px
+						height: 15px
+						line-height: 1
+						display: inline-block
+						vertical-align: middle
+						margin-right: 10px
+					span
+						font-size: rem-calc(15)
+						letter-spacing: 1px
+						color: $colorB
+						padding-right: 30px
+
+
+				.linkContent
+					width: 100%
+					max-width: 450px
+					text-align: center
+					padding-top: 30px
+					padding-bottom: 15px	
+					a.link
+						display: inline-block
+						color: $colorA
+						padding-right: 15px
+						padding-left: 15px
+						font-size: rem-calc(16)
+						margin-bottom: 15px
+						p
+							color: $colorB 
+							text-decoration: underline
+							display: inline-block
+
+			.tab
+				width: 100%
+				height: 55px
+				position: relative
+				+fc()
+				a
+					width: 50%
+					display: inline-block
+					position: relative
+					text-align: center
+					font-size: rem-calc(20)
+					text-decoration: none
+					letter-spacing: 1px
+					color: $colorA
+					border-bottom: $colorD 1px solid
+
+					&::before
+						width: 100%
+						position: absolute
+						bottom: 0
+						height: 3px
+						content: ''
+						background-color: $colorA
+						display: block	
+						opacity: 0
+						+ama(all,0.5s,0s)				
+					&.active
+						&::before
+							width: 100%
+							position: absolute
+							bottom: 0
+							height: 3px
+							content: ''
+							background-color: $colorA
+							display: block
+							opacity: 1	
+							
+
+
+
+
+
+			
+
+
+
+		.title
+			width: 100%
+			max-width: 1300px
+			margin-right: auto
+			margin-left: auto
+			display: block
+			h1
+				color: $colorA
+				font-size: rem-calc(35)
+				text-align: center
+				display: inline-block
+				line-height: rem-calc(35)
+				width: 100%
+				
+			h2
+				color: $colorB
+				font-size: rem-calc(26)	
+				display: inline-block
+				padding-top: 20px
+				width: 100%
+				text-align: center
+				letter-spacing: 1px
+				line-height: rem-calc(26)
+				&.login
+					color: #8c8c8c
+					text-transform: uppercase
+
+
 	.maincontent
 		position: relative
 		width: 100%
@@ -393,6 +733,10 @@ body
 		section
 			padding-top: 50px
 			padding-bottom: 50px
+
+			&.news
+				padding-top: 0
+				padding-bottom: 0
 			h2
 				font-size: rem-calc(40)
 				line-height: rem-calc(40)
@@ -1060,6 +1404,8 @@ footer
 			display: block
 			letter-spacing: 1px
 			text-decoration: none
+			white-space: nowrap
+			
 			&:after
 				content: ''
 				display: inline-block
@@ -1113,19 +1459,380 @@ article.maincontent
 		max-width: 1024px	
 		margin-right: auto
 		margin-left: auto
-	&.sing
-		section.list
+	
+	&.sing,&.news,&.results,&.forum,&.partner
+		section.partnerContent
+			padding-top: 0 
+			width: 100%  
+			max-width: 1024px
+			margin-right: auto
+			margin-left: auto		
+			.replyList
+				width: 100%
+				border-top: #e0e0e0 3px solid
+				max-width: 1024px
+				margin-right: auto
+				margin-left: auto
+				h2
+					font-size: rem-calc(30)
+					font-weight: 400
+					margin-bottom: 40px
+				.replyBox
+					width: 100%
+					padding-bottom: 20px
+					border-bottom: $colorB 1px solid
+					.content
+						background-color: #efefef
+						padding: 10px 15px
+						color: $colorB
+						font-size: rem-calc(16)
+						letter-spacing: 1px
+						line-height: 1.7
+	
+					.head
+						width: 100%
+						padding-top: 20px
+						padding-bottom: 20px
+						+fc()
+						.date
+							width: 50%
+							text-align: right
+							font-size: rem-calc(16)
+							color: $colorA
+						.name
+							width: 50%
+							text-align: left
+							position: relative
+							letter-spacing: 1px
+							&::before
+								width: 17px
+								height: 1px
+								background-color: $colorA
+								content: ''
+								position: absolute
+								display: block
+								top: 50%
+	
+							p.realName
+								display: inline-block
+								font-size: rem-calc(20)
+								color: $colorA
+								margin-right: 10px
+								letter-spacing: 1px
+								padding-left: 30px
+								position: relative
+								
+							p.nickName	
+								display: inline-block
+								color: $colorB
+								font-size: rem-calc(16)	    								
+			.profile	
+				width: 100%		
+				h2
+					font-size: rem-calc(40)
+					color: $colorA
+					text-align: left
+					display: inline-block
+					line-height: 1
+					margin-bottom: 0
+					position: relative
+					padding-bottom: 30px
+					width: 100%
+				.article
+					line-height: 1.7
+					font-size: rem-calc(16)
+					color: $colorB
+					padding-top: 30px
+					padding-bottom: 0
+					img
+						float: left
+						display: inline-block
+						margin-right: 40px
+					h3
+						font-size: rem-calc(25)	
+						text-align: left
+						line-height: 1
+						display: inline-block
+						width: 100%
+						padding-top: 20px
+						padding-bottom: 15px
+						color: $colorA
+					p
+						font-size: rem-calc(16)	
+				.mediaContent
+					display: block
+					float: none
+					width: 100%
+					padding-top: 30px
+					padding-bottom: 30px
+					border-bottom: $colorB 1px dotted
+					a
+						display: inline-block
+						line-height: 20px
+						padding-right: 20px
+
+						i
+							font-size: rem-calc(16)
+							color: $colorA
+							line-height: 1.7
+							width: 20px
+							height: 20px
+							display: inline-block
+							vertical-align: middle
+							margin-right: 5px
+							&::before
+								margin-right: 0
+								margin-left: 0 
+							
+						span
+							font-size: rem-calc(20)	
+							display: inline-block
+							line-height: 1
+							vertical-align: middle
+							color: $colorA
+		section.partnerList
+			width: 100%  
+			max-width: 1300px
+			margin-right: auto
+			margin-left: auto	
+			+fc()
+			flex-wrap: wrap
+			justify-content: center
+			padding-bottom: 0
+			a
+				width: 25%
+				text-decoration: none
+				margin-bottom: 30px			
+				&:hover
+					img
+						box-shadow: 0 0 15px rgba(0,0,0,0.3)
+						-webkit-transform: scale(1.03)
+						-moz-transform: scale(1.03)
+						-ms-transform: scale(1.03)
+						-o-transform: scale(1.03)
+						transform: scale(1.03)
+						
+				img
+					border: #fff 2px solid
+					margin-bottom: 15px
+					+ama(all,0.5s,0s)
+					display: block
+					margin-right: auto
+					margin-left: auto
+					transform-origin: center
+				p
+					text-align: center
+					color: $colorA
+					font-size: rem-calc(18)
+
+
+
+		section.forumList  
+			width: 100%
+			max-width: 1300px	
+			margin-right: auto
+			margin-left: auto
+			a.list
+				position: relative
+				width: 100%
+				max-width: 1025px
+				display: block
+				margin-right: auto
+				margin-left: auto
+				background-color: rgba(255,255,255,0.35)
+				padding: 20px 25px 25px 25px
+				text-decoration: none
+				margin-bottom: 30px
+				+ama(all,0.5s,0s)
+				&:hover
+					background-color: rgba(255,255,255,1)
+					span
+						opacity: 1
+						&:after
+							right: 8px
+
+
+				&:after
+					width: 0
+					position: absolute
+					height: 3px
+					bottom: 0
+					display: block
+					content: ''
+					background-color: $colorC
+
+				h3
+					font-size: rem-calc(25)
+					color: $colorA
+					letter-spacing: 1px
+					display: inline-block
+					text-align: left
+					padding-bottom: 30px
+					width: 80%
+					line-height: 1.6
+				p.data
+					font-size: rem-calc(15)
+					color: $colorC
+					letter-spacing: 1px
+				span
+					display: block
+					position: absolute
+					letter-spacing: 1px
+					padding: 0 30px 0 15px
+					line-height: 40px
+					background-color: $colorA
+					color: #fff
+					height: 40px
+					right: 5%
+					opacity: 0.7
+					top: calc(50% - 20px)
+					+ama(all,0.5s,0s)
+					&:after
+						right: 13px
+						top: calc( 50% - 3px )
+						position: absolute
+						display: block
+						width: 0
+						height: 0
+						+ama(all,0.5s,0s)
+						content: ''
+						border-style: solid
+						border-width: 3px 0 3px 6px
+						border-color: transparent transparent transparent #fff			
+
+
+						
+
+											
+		section.resultList
+			width: 100%
+			max-width: 1300px
+			display: block
+			padding: 50px 0 0 0 
+			margin-right: auto
+			margin-left: auto
+			a
+				display: block
+				height: auto
+				padding: 30px 50px 30px 35px
+				text-decoration: none
+				background-color: rgba(255,255,255,0.3)
+				+fc()
+				margin-bottom: 30px
+				+ama(all,0.5s,0s)
+				&:hover
+					background-color: rgba(255,255,255,1)
+					box-shadow: 0 0 15px rgba(0,0,0,0.1)
+					.content
+						&:after
+							-webkit-transform: translateX(10px)
+							-moz-transform: translateX(10px)
+							-ms-transform: translateX(10px)
+							-o-transform: translateX(10px)
+							transform: translateX(10px)
+							
+
+				p.class
+					width: auto
+					height: 45px
+					line-height: 45px
+					font-size: rem-calc(16)
+					padding: 0 26px
+					color: #fff
+					display: inline-block
+					white-space: nowrap
+					letter-spacing: 1px
+					min-width: 120px
+					text-align: center
+					
+					&.biography
+						background-color: $colorA
+					&.news	
+						background-color: #5a9ead
+					&.literature	
+						background-color: #ef5e6b	
+					&.history
+						background-color: #76ae4d
+					&.sing
+						background-color: #b88b51												
+				.line
+					width: 1px
+					height: 30px
+					background-color: $colorC
+					transform: skew(-50deg)
+					display: inline-block
+					transform-origin: center
+					margin-top: 8px
+					vertical-align: middle
+					margin-right: 35px
+					margin-left: 35px
+				.content
+					width: 100%	
+					font-size: rem-calc(16)
+					padding-top: 13px
+					color: $colorC
+					display: block
+					letter-spacing: 1px
+					position: relative
+					.focus
+						color: #ef5e6b
+						background-color: #fbebcb
+					&:after
+						+ama(all,0.5s,0s)
+						display: block
+						content: ''
+						width: 0
+						height: 0
+						position: absolute
+						top: 15px
+						right: -20px
+						border-style: solid
+						border-width: 5px 0 5px 10px
+						border-color: transparent transparent transparent $colorA
+
+						
+					
+
+					
+
+
+
+									
+
+			
+
+		section.search
+			p.results
+				padding-top: 20px
+				padding-bottom: 20px
+				font-size: rem-calc(18)
+				letter-spacing: 1px
+				color: $colorA
+	
+		section.list,section.newsList
 			+fc(justify-content,space-between)
 			margin-right: auto
 			margin-left: auto
 			width: 100%
 			max-width: 1300px
+			flex-wrap: wrap
+			padding-top: 50px	
 			.link
-				width: 45%
-				position: relative
+				width: 48%
+				position: relative					
 				display: block
-				background-color: #fff
-				padding: 35px 30px
+				background-color: rgba(255,255,255,0.85)
+				padding: 35px 30px 50px 30px
+				+ama(all,0.5s,0s)
+				margin-bottom: 35px	
+				text-decoration: none
+				&:hover
+					box-shadow: 0 0 20px rgba(0,0,0,0.15)
+					background-color: rgba(255,255,255,1)
+					&:before
+						border-color: transparent transparent $colorA transparent
+
+
 				&:before
 					content: ''
 					display: block
@@ -1136,34 +1843,82 @@ article.maincontent
 					height: 0
 					border-style: solid
 					border-width: 0 0 15px 15px
-					border-color: transparent transparent $colorA transparent					
+					+ama(border-color,0.5s,0s)
+					border-color: transparent transparent $colorC transparent					
 				.title
 					width: 100%
 					display: block
 					text-align: left
 					margin-bottom: 20px
+					+ama(transform,0.8s,0s)
+					text-decoration: none
+					&:hover
+						transform: translateX(5px)	
 					
 					h3
-						font-size: rem-calc(30)
+						font-size: rem-calc(25)
 						color: $colorC
 						display: inline-block
 						margin-right: 20px
+						text-decoration: none
 						span
 							color: $colorA
+							text-decoration: none
+				h3.news
+					font-size: rem-calc(25)
+					color: $colorA	
+					display: inline-block
+					margin-right: 10px	
+					padding-left: 20px
+					position: relative
+					text-decoration: none
+					text-align: left
+					line-height: 1.4
+					margin-bottom: 15px
+					&:before
+						left: 0
+						top: 15px
+						content: ''
+						position: absolute
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 4px 0 4px 8px
+						border-color: transparent transparent transparent $colorA										
+				p.newsContent
+					font-size: rem-calc(15)
+					line-height: 1.5
+					letter-spacing: 1px
+					color: $colorC
+					text-decoration: none
+				p.data
+					display: inline-block
+					width: 100%
+					font-size: rem-calc(13)	
+					padding: 10px 0 10px 0
+					color: $colorC
+					position: absolute
+					bottom: 10px		
+
+
 				.name
 					width: 100%
 					display: block
 					text-align: left
 					margin-bottom: 20px
-					
+					+ama(transform,0.8s,0s)
+					text-decoration: none
+					&:hover
+						transform: translateX(5px)					
 
 					h3
 						font-size: rem-calc(30)
-						color: $colorC
+						color: $colorA	
 						display: inline-block
 						margin-right: 10px	
 						padding-left: 20px
 						position: relative
+						text-decoration: none
 						&:before
 							left: 0
 							top: calc(50% - 4px)
@@ -1188,6 +1943,8 @@ article.maincontent
 						font-size: rem-calc(16)
 						line-height: rem-calc(16)
 						vertical-align: middle
+						&:hover
+							text-decoration: underline
 						span
 							color: $colorA
 
@@ -1197,18 +1954,318 @@ article.maincontent
 							&:before
 								margin-left: 0
 								margin-right: 5px
+		section.newsList
+			padding-top: 50px			
+		section.partnerContent,section.singContent,section.newsContent,section.forumContent
+			padding-top: 0
+			max-width: 1300px
+			width: 100%
+			margin-right: auto
+			margin-left: auto
+			padding-bottom: 0
+			section.reply
+				padding-top: 0
+				max-width: 1024px
+				margin-right: auto
+				margin-left: auto
+				padding-bottom: 0
+				.myDetial
+					width: 100%
+					padding-top: 10px
+					padding-bottom: 10px
+					p.name
+						display: inline-block
+						font-size: 1.125rem
+						color: #305572
+						margin-right: 10px
+						letter-spacing: 1px
+						padding-left: 30px
+						position: relative
+						&:before
+							width: 17px
+							height: 1px
+							background-color: #305572
+							content: ''
+							position: absolute
+							display: inline-block
+							top: 50%
+							left: 0
+					.date
+						display: inline-block
+						text-align: right
+						font-size: 1rem
+						color: #305572							
+				h2
+					font-weight: normal
+					margin-bottom: 0
+					font-size: rem-calc(30)
+					line-height: rem-calc(30)
+				.textBox
+					width: 100%
+					padding-top: 30px
+					textarea
+						width: 100%
+						border: none
+						height: 100px
+						font-size: rem-calc(16)
+						padding: 10px
+					.submitBox
+						width: 100%
+						height: auto
+						text-align: right
+						margin-right: 30px
+						padding-top: 20px
+						img
+							display: inline-block
+							width: 112px
+							height: auto
+							margin-right: 30px
+							vertical-align: middle
+							height: 45px
 
-
-							
+						input
+							width: 180px
+							height: 45px
+							border: none
+							display: inline-block
+							vertical-align: middle
+							font-size: rem-calc(16)
+							text-indent: 15px
+							margin-right: 30px
+							&::-webkit-input-placeholder
+								color: $colorC
+							&:-moz-placeholder
+								color: $colorC							
+							&::-moz-placeholder
+								color: $colorC
+						button.submit
+							width: 145px
+							height: 45px	
+							background-color: $colorA
+							color: #fff
+							font-size: rem-calc(16)
+							line-height: 38px
+							border: none
+							display: inline-block			
+			.replyList
+				width: 100%
+				border-top: #e0e0e0 3px solid
+				max-width: 1024px
+				margin-right: auto
+				margin-left: auto
+				border-top: none
+				h2
+					font-size: rem-calc(30)
+					font-weight: 400
+					margin-bottom: 40px
+				.replyBox
+					width: 100%
+					padding-bottom: 20px
+					border-bottom: $colorB 1px solid
+					.content
+						background-color: #efefef
+						padding: 10px 15px
+						color: $colorB
+						font-size: rem-calc(16)
+						letter-spacing: 1px
+						line-height: 1.7
+	
+					.head
+						width: 100%
+						padding-top: 20px
+						padding-bottom: 20px
+						+fc()
+						.date
+							width: 50%
+							text-align: right
+							font-size: rem-calc(16)
+							color: $colorA
+						.name
+							width: 50%
+							text-align: left
+							position: relative
+							letter-spacing: 1px
+							&::before
+								width: 17px
+								height: 1px
+								background-color: $colorA
+								content: ''
+								position: absolute
+								display: block
+								top: 50%
+	
+							p.realName
+								display: inline-block
+								font-size: rem-calc(20)
+								color: $colorA
+								margin-right: 10px
+								letter-spacing: 1px
+								padding-left: 30px
+								position: relative
+								
+							p.nickName	
+								display: inline-block
+								color: $colorB
+								font-size: rem-calc(16)	    				
 						
-																																			
+			.preview	
+				width: 100%
+				max-width: 1024px
+				margin-right: auto
+				margin-left: auto
+				padding-bottom: 0
+				h3
+					padding-bottom: 35px
+				p
+					text-align: center
+					line-height: 1.7
+					font-size: rem-calc(16)
+					color: $colorB		
+			.main
+				h3
+					padding-bottom: 35px	
+				p
+					text-align: left
+					line-height: 1.7
+					font-size: rem-calc(16)
+					color: $colorB
+					img
+						max-width: 350px
+						display: block
+						&.left
+							float: left
+							margin: 15px 20px 15px 0					
+						&.right
+							float: right
+							margin: 15px 0 15px 20px
+			.profile
+				width: 100%
+				padding-top: 0
+				padding-bottom: 0
+				//border-bottom: $colorD 3px solid	
+				.navPage
+					padding-top: 30px
+					padding-bottom: 50px 
+					+fc(justify-content,space-between)
+					.prev,.next,.goList
+						font-size: rem-calc(20)
+						color: $colorA
+						display: block
+						text-decoration: none
+						letter-spacing: 1px
+						i
+							display: inline-block
+							line-height: 16px
+							height: 16px
+							&:before
+								font-size: rem-calc(16)
+								margin-right: 5px
+					.goList
+						font-size: rem-calc(20)
+						color: $colorA
+				&.news
+					h2
+						font-size: rem-calc(30)
+					p.article
+						font-size: rem-calc(16)
+						img
+							margin-left: 40px	
 
+				h2
+					font-size: rem-calc(40)
+					color: $colorA
+					display: inline-block
+					line-height: 1
+					margin-bottom: 0	
+					position: relative
+					padding-bottom: 30px						
+					&:before
+						width: 45px
+						height: 2px
+						background-color: $colorC
+						content: ''
+						position: absolute
+						left: 0
+						bottom: 0
+						display: block
 
+				.data
+					color: $colorC
+					display: block
+					padding-top: 20px
+							
+				.author
+					padding-top: 28px
+					text-align: left
+					font-size: 	rem-calc(25)
+					h3
+						display: inline-block
+						&:first-child
+							margin-right: 30px
+						span
+							color: $colorA
+				p.article
+					font-size: rem-calc(16)	
+					color: $colorB	
+					padding-top: 30px
+					// padding-bottom: 30px
+					line-height: 1.7	
+					display: inline-block
+					width: 100%
+					position: relative
+							
+					img
+						display: inline
+						float: right	
+						max-width: 500px	
+						width: 100%
+						margin-left: 20px
+						margin-top: 0px
+						margin-bottom: 30px
+						margin-right: 0
+				.mediaContent
+					display: block
+					float: none
+					width: 100%
+					padding-top: 50px
+					padding-bottom: 30px
+					border-bottom: $colorB 1px dotted
+					a
+						display: inline-block
+						line-height: 20px
+						padding-right: 20px
 
-
+						i
+							font-size: rem-calc(16)
+							color: $colorA
+							line-height: 1.7
+							width: 20px
+							height: 20px
+							display: inline-block
+							vertical-align: middle
+							margin-right: 5px
+							&::before
+								margin-right: 0
+								margin-left: 0 
+							
+						span
+							font-size: rem-calc(20)	
+							display: inline-block
+							line-height: 1
+							vertical-align: middle
+							color: $colorA
+		section.forumContent
+			.profile
+				padding-bottom: 50px
+				border-bottom: $colorC 1px solid
+			.main
+				max-width: 1300px	
+				border-bottom: $colorD 3px solid
+			.replyList
+				border-top: none	
 		section.search
 			padding-top: 0
-			padding-bottom: 50px
+			padding-bottom: 0px
 			width: 100%
 			max-width: 1300px
 			text-align: center
@@ -1296,7 +2353,7 @@ article.maincontent
 			padding-top: 0
 			padding-bottom: 0	
 			.pageNav
-				padding-top: 0
+				padding-top: 0	
 				
 		section.list
 			padding-top: 0
@@ -1907,9 +2964,9 @@ article.maincontent
 				//padding-bottom: 10px
 				span.date
 					display: inline-block
-    				text-align: right
-    				font-size: 1rem
-    				color: #305572				
+					text-align: right
+					font-size: 1rem
+					color: #305572				
 				p.name	
 					display: inline-block
 					font-size: rem-calc(18)
@@ -2852,14 +3909,122 @@ article.maincontent
 	position: fixed
 	background-color: rgba(0,0,0,0.75)
 	z-index: 500
+	overflow: auto
 	+fc(column,d,center,center,d)
 	opacity: 1
 	+ama(opacity,0.5s,0s)
 	transform: translateX(0)	
+	top: 0
+	left: 0
 	&.op0
 		opacity: 0
 	&.moveOut
-		transform: translateX(100vw)	
+		transform: translateX(100vw)
+	&.terms
+		display: block	
+		
+		padding-top: 50px
+	.close
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		border: #fff 2px solid 
+		margin-right: auto
+		margin-left: auto
+		position: relative
+		margin: 0 auto  30px auto
+		
+		&:after
+			width: 70%
+			height: 2px
+			content: ''
+			display: block
+			background-color: #fff
+			position: absolute
+			top: calc( 50% - 1px )
+			left: 15%
+			-webkit-transform: rotate(45deg)
+			-moz-transform: rotate(45deg)
+			-ms-transform: rotate(45deg)
+			-o-transform: rotate(45deg)
+			transform: rotate(45deg)
+		&:before
+			width: 70%
+			height: 2px
+			content: ''
+			display: block
+			background-color: #fff
+			position: absolute
+			top: calc( 50% - 1px )
+			left: 15%
+			-webkit-transform: rotate(-45deg)
+			-moz-transform: rotate(-45deg)
+			-ms-transform: rotate(-45deg)
+			-o-transform: rotate(-45deg)
+			transform: rotate(-45deg)				
+	.termsContent
+		width: 90%
+		max-width: 780px
+		background-color: #fff
+		margin-right: auto
+		margin-left: auto 
+		padding: 50px
+		margin-bottom: 50px
+		h3
+			width: 100%
+			display: inline-block
+			padding-top: 0
+			padding-bottom: 15px
+			font-size: rem-calc(30)
+			text-align: center
+			color: $colorA
+		h4
+			font-size: rem-calc(20)
+			padding-top: 15px
+			padding-bottom: 15px
+			color: $colorC
+			text-transform: uppercase
+			text-align: center
+		.main
+			font-size: rem-calc(15)
+			color: $colorC
+			line-height: 1.6
+			text-align: left
+			h3
+				font-size: rem-calc(20)
+				padding-top: 5px
+				padding-bottom: 5px
+				color: $colorA
+				text-align: left
+			p
+				text-align: left
+				font-size: rem-calc(16)
+				padding-top: 5px
+				padding-bottom: 5px
+				letter-spacing: 1px
+			a
+				color: $colorA
+				text-decoration: underline	
+			ul
+				width: 100%
+				display: block
+				
+				li
+					display: block
+					padding-top: 5px
+					padding-bottom: 5px
+					position: relative
+					padding-left: 15px
+					font-size: rem-calc(15)
+					&:after
+						width: 4px
+						height: 4px
+						content: ''
+						display: block
+						position: absolute
+						background-color: $colorC
+						top: 15px
+						left: 0
 
 	.frame
 		padding: 15px
@@ -2889,6 +4054,7 @@ article.maincontent
 		margin-right: auto
 		margin-left: auto
 		position: relative
+		cursor: pointer
 		
 		&:after
 			width: 70%
@@ -2992,6 +4158,12 @@ article.maincontent
 		color: $colorB	
 	footer .container .right menu.footer a
 		margin-bottom: 20px	
+	article.maincontent.sing section.list .link
+		width: 46%	
+	article.maincontent.sing section.list
+		padding-bottom: 0	
+	.maincontent.sing.inside .pageNavContent
+		padding-top: 0		
 @media only screen and (max-width:$xl)
 	body header
 		padding-right: 50px
@@ -3004,6 +4176,8 @@ article.maincontent
 		padding-left: 40px
 	footer .container .right menu.footer a
 		margin-bottom: 20px	
+	article.maincontent.sing section.list .link
+		width: 47%			
 	body .maincontent section.partners .partnersContainer
 		a
 			width: 18%
@@ -3013,6 +4187,30 @@ article.maincontent
 				width: 100%
 
 @media only screen and (max-width:$l)
+
+	article.maincontent.partner section.partnerList a
+		padding-right: 7px
+		padding-left: 7px
+		img
+			max-width: 100%
+	article.maincontent.news section.newsList .link h3.news:before
+		top: 16px
+	article.maincontent.sing section.list .link
+		padding: 20px 15px
+	article.maincontent.sing section.list .link .mediaList a
+		margin-bottom: 15px
+	.maincontent.sing.inside .pageNavContent
+		padding-top: 0
+
+	article.maincontent.sing section.list .link
+		width: 48%			
+	article.maincontent.sing section.singContent .replyList h2
+		margin-bottom: 30px
+	article.maincontent.sing section.singContent section.reply
+		padding-top: 30px
+	article.maincontent.sing section.singContent .profile p.article img
+		max-width: 450px
+		margin-bottom: 10px
 	article.maincontent.literature section.reply
 		padding-top: 35px
 	article.maincontent.literature section.literatureContent .profile
@@ -3253,11 +4451,33 @@ article.maincontent
 					width: 80% 
 	article.maincontent.literature section.bookList
 		padding-top: 50px				
-
+	article.maincontent.forum section.forumContent .main
+		padding-bottom: 50px	
+	article.maincontent.forum section.forumContent section.reply
+		padding-top: 50px	
+	article.maincontent.partner section.partnerContent section.reply
+		padding-top: 50px	
 		
 
 
 @media only screen and (max-width:$m)
+	article.maincontent.forum section.forumContent section.reply
+		padding-top: 30px
+	article.maincontent.forum section.forumContent .replyList
+		padding-top: 30px
+	article.maincontent.news section.newsList .link h3.news:before
+		top: 12px
+	article.maincontent.news section.newsContent .profile.news p.article img
+		max-width: 400px
+	article.maincontent.news section.newsList .link h3.news
+		font-size: rem-calc(20)
+	article.maincontent.news section.newsList .link
+		padding: 20px 15px 50px 15px
+	article.maincontent.results section.resultList a .content
+		line-height: 1.7
+		padding-top: 0
+	article.maincontent.sing section.list .link .title h3
+		font-size: 20px
 	article.maincontent.literature section.list a.style2 h2.name
 		font-size: 	rem-calc(25)
 	article.maincontent.literature section.list a.style2
@@ -3376,9 +4596,200 @@ article.maincontent
 	article.maincontent.literature section.list a:nth-child(3n+3)	
 		margin-right: 0
 	article.maincontent.oldMember section.reply .myDetial
-		padding-top: 20px		
+		padding-top: 20px	
+	article.maincontent.forum section.forumContent .profile h2
+		font-size: 	rem-calc(30)	
+		line-height: 1.7	
+	article.maincontent.forum section.forumContent .profile p.article img
+		max-width: 400px	
+	article.maincontent.forum section.forumContent .main
+		padding-top: 30px	
+		padding-bottom: 30px
 
 @media only screen and (max-width:$s)
+	.popupContent .termsContent
+		padding: 30px 15px
+		width: 95%
+	.popupContent .termsContent .main h3
+		text-align: center
+	.popupContent .termsContent .main p
+		text-align: center 	
+	.maincontent.partner.inside
+		padding-bottom: 100px		
+	article.maincontent.partner section.partnerContent .replyList
+		border-top: none
+	article.maincontent.partner section.partnerContent section.reply .textBox .submitBox button.submit
+		margin-right: auto
+		margin-left: auto
+		display: block
+		margin-top: 30px		
+	article.maincontent.partner section.partnerContent section.reply h2
+		margin-bottom: 20px	
+	article.maincontent.partner section.partnerContent section.reply
+		padding-top: 30px	
+	article.maincontent.partner section.partnerContent .profile .mediaContent
+		border-bottom: 	none
+	article.maincontent.partner section.partnerContent .replyList
+		padding-top: 30px	
+	article.maincontent.partner section.partnerContent .replyList h2
+		margin-bottom: 30px	
+	article.maincontent.partner section.partnerContent
+		padding-right: 15px
+		padding-left: 15px	
+		.profile 
+			.article
+				text-align: center
+			h2
+				text-align: center
+				&::before
+					display: none
+						
+			img
+				display: block
+				margin-right: auto
+				margin-left: auto
+											
+				
+	article.maincontent.forum section.forumContent section.reply .textBox .submitBox button.submit
+		margin-right: auto
+		margin-top: 30px
+		margin-left: auto
+		display: block
+		float: none
+	article.maincontent.forum section.forumContent section.reply .textBox .submitBox input
+		margin-right: 20px
+	article.maincontent.forum section.forumContent section.reply .textBox .submitBox img
+		margin-right: 20px
+	article.maincontent.forum section.forumContent section.reply
+		padding-right: 15px
+		padding-left: 15px
+	article.maincontent.forum section.forumContent .replyList .replyBox
+		font-size: rem-calc(15)
+	article.maincontent.forum section.forumContent .replyList
+		padding-right: 15px
+		padding-left: 15px
+	article.maincontent.forum section.forumContent .main p img.right
+		margin: 0
+		margin-bottom: 20px
+		display: inline-block
+		width: 100%
+	article.maincontent.forum section.forumContent .main h3
+		padding-bottom: 30px
+	article.maincontent.forum section.forumContent .profile
+		padding-bottom: 30px
+	article.maincontent.forum section.forumContent .main p
+		padding-right: 15px
+		padding-left: 15px
+		text-align: center
+
+	article.maincontent.forum section.forumContent .profile p.article
+		padding-right: 15px
+		padding-left: 15px
+		text-align: center
+		font-size: rem-calc(16)
+	article.maincontent.forum section.forumContent .profile h2:before
+		left: calc(50% - 22.5px)
+	article.maincontent.forum section.forumContent .profile h2
+	article.maincontent.forum section.forumList a.list
+		padding: 15px 18px 22px 18px
+		background-color: rgba(255,255,255,0.8)
+	article.maincontent.forum section.forumList a.list span
+		font-size: rem-calc(15)
+		height: 35px
+		line-height: 35px
+		position: absolute
+		bottom: 15px
+		display: block
+		top: auto
+		
+	article.maincontent.forum section.forumList a.list h3
+		font-size: rem-calc(18)
+	article.maincontent.forum section.forumList
+		padding-right: 15px
+		padding-left: 15px
+		padding-top: 30px
+	article.maincontent.news section.newsList
+		padding-right: 15px
+		padding-left: 15px
+	article.maincontent.news section.newsList .link
+		width: 100%
+
+	body .maincontent.inside.news
+		padding-bottom: 50px
+	article.maincontent.news section.newsContent .profile .navPage
+		padding-right: 15px
+		padding-left: 15px
+	article.maincontent.news section.newsContent .profile .mediaContent
+		text-align: center
+		padding-top: 30px
+		width: calc(100% - 30px)
+		margin-right: auto
+		margin-left: auto
+
+		
+		a
+			font-size: rem-calc(15)
+	
+	article.maincontent.news section.newsContent .profile.news p.article
+		padding-right: 15px
+		padding-left: 15px
+		text-align: center
+		
+	article.maincontent.news section.newsContent .profile .data
+		text-align: center
+	article.maincontent.forum section.forumContent .profile h2
+		font-size: rem-calc(25)	
+		line-height: 1.6
+	article.maincontent.news section.newsContent .profile.news h2
+		font-size: rem-calc(25)
+		line-height: 1.6
+		padding-right: 15px
+		padding-left: 15px
+		padding-bottom: 15px
+		&:before
+			left: calc(50% - 22.5px)
+	body .loginContent .loginBoard img.forgotPw
+		width: 50px
+	img.completed,img.forgotPw		
+		margin-top: 30px
+		margin-right: auto
+		margin-left: auto
+		display: block
+		margin-bottom: 30px
+		width: 50px
+		height: auto
+	body .loginContent .loginBoard.forgotPw
+		width: 90%
+	body .loginContent
+		padding-top: 120px
+	body .loginContent .loginBoard form textarea.Experience
+		padding-right: 0
+		padding-left: 0
+	body .loginContent .loginBoard form textarea.Education
+		padding-right: 0
+		padding-left: 0
+	body .loginContent .loginBoard form input, body .loginContent .registered form input
+		font-size: rem-calc(15)	
+	body .loginContent .loginBoard form .notice li, body .loginContent .registered form .notice li
+		font-size: rem-calc(15)
+	body .loginContent .loginBoard .need, body .loginContent .registered .need
+		padding-top: 8px
+		padding-bottom: 8px
+		font-size: rem-calc(15)
+	body .loginContent .loginBoard form label.dis, body .loginContent .registered form label.dis
+		font-size: rem-calc(15)	
+	body .loginContent .loginBoard .tab, body .loginContent .registered .tab
+		height: 45px
+	body .loginContent .loginBoard .tab a, body .loginContent .registered .tab a
+		font-size: rem-calc(18)
+	body .loginContent .loginBoard, body .loginContent .registered
+		width: 90%
+		padding: 30px 15px 
+	article.maincontent.sing section.list
+		padding-right: 15px
+		padding-left: 15px
+	article.maincontent.sing section.list .link
+		width: 100%
 	article.maincontent.literature section.list a.style2
 		width: 50% 
 		padding-top: 10px
@@ -4002,12 +5413,86 @@ article.maincontent
 		width: 100%
 		text-align: center
 	article.maincontent.oldMember section.reply .myDetial
-		padding-top: 20px		
-					
-							
-						
-
-
+		padding-top: 20px	
+	article.maincontent.sing section.singContent
+		padding-right: 15px
+		padding-left: 15px		
+	article.maincontent.sing section.singContent .profile .mediaContent
+		padding-top: 30px
+		padding-bottom: 15px	
+	article.maincontent.sing section.singContent .profile .mediaContent a
+		margin-bottom: 20px
+		font-size: rem-calc(15)
+	article.maincontent.sing section.singContent .preview
+		padding-top: 30px	
+	article.maincontent.sing section.singContent .preview h3
+		padding-bottom: 15px	
+	article.maincontent.sing section.singContent .main h3
+		padding-bottom: 15px	
+	article.maincontent.sing section.singContent .main p img.right,article.maincontent.sing section.singContent .main p img.left
+		width: 100%
+		position: relative		
+		margin: 0 auto 15px auto
+	article.maincontent.sing section.singContent .main p
+		text-align: center			
+	article.maincontent.sing section.singContent .replyList
+		margin-top: 35px		
+	article.maincontent.sing section.singContent .replyList .replyBox .content
+		font-size: rem-calc(15)		
+	article.maincontent.sing section.singContent section.reply .myDetial
+		padding-top: 20px	
+		text-align: center
+	article.maincontent.sing section.singContent section.reply .textBox .submitBox img
+		width: 95px
+		height: auto
+	article.maincontent.sing section.singContent section.reply .textBox .submitBox button.submit
+		margin-right: auto
+		margin-left: auto
+		display: block
+		margin-top: 15px	
+	article.maincontent.sing section.singContent section.reply .myDetial p.name:before
+		display: none		
+	article.maincontent.sing section.singContent section.reply .myDetial p.name
+		padding-left: 0	
+	article.maincontent.oldMember section.reply .myDetial p.name:before
+		display: none	
+	article.maincontent.oldMember section.reply .myDetial p.name
+		padding-left: 0	
+	body .loginContent .loginBoard.completed
+		width: 90%
+	body .loginContent .loginBoard img.completed
+		width: 50px	
+	body .loginContent .loginBoard.completed
+		height: auto
+	body .loginContent .loginBoard p.completed
+		font-size: rem-calc(20)	
+	article.maincontent.results section.resultList a
+		width: 90%
+		margin-right: auto
+		margin-left: auto
+		flex-wrap: wrap
+		padding: 20px 23px
+		background-color: rgba(255,255,255,0.7)
+		.line
+			display: none
+		.content
+			padding-top: 15px
+			text-align: center
+			&:after
+				display: none
+	article.maincontent.news section.newsList .link h3.news
+		padding-left: 0
+		&:before
+			display: none
+	article.maincontent.partner section.partnerList a
+		width: 50%
+	article.maincontent.partner section.partnerList
+		padding-right: 15px
+		padding-left: 15px	
+		padding-top: 30px	
+	article.maincontent.partner section.partnerContent .replyList
+		border-top: none
+		
 @media only screen and (max-width:$xs)
 	body .bg .bottom
 		bottom: 250px

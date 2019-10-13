@@ -7,7 +7,7 @@
 $(window).on("load", function () {
    $('p.profile').each(function(index,ele){
     let text = $(this).get(0);
-    console.log(text);
+    //console.log(text);
       if ($(window).width() <= scrL && $(window).width() >= scrS) {
     $clamp(text, {
       clamp: 5

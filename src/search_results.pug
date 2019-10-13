@@ -1,0 +1,84 @@
+extends _layoutStyle2
+block page_title
+  title 瀛社 - 吟唱專區
+block style
+  //- link(rel="stylesheet", href="css/index.min.css")
+  style.
+
+block script
+  //- script(type="text/javascript" src="js/index.min.js")
+  script(type="text/javascript").
+    console.log('haha')
+
+block content
+  article.maincontent.results.inside
+    .introBanner(style="background-image:url(images/banner-search.png)")
+      h1 搜尋結果
+      h2 search results
+      .track
+        img(src="images/home.png", alt="")
+        a.home(href="#") 首頁
+        a.now 搜尋結果
+    section.search
+      label
+        span 請輸入搜尋內容 : 
+        input(type="text" placeholder="請輸入關鍵字").phColor
+      p.results 以下是搜尋" XXXXXX "的關鍵字結果
+    section.resultList  
+      a(href="#")
+        p.class.biography 社員傳記 
+        .line 
+        .content 討論標題討論標題討<span class="focus">論標題</span>討論標題討論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.news 公告專區 
+        .line 
+        .content 討論標題討論標題討論標題討論標題討論標題討論標題討論標題討論<span class="focus">論標題</span>...
+      a(href="#")
+        p.class.literature 文獻 
+        .line 
+        .content 討論標題討論標題討論標題討<span class="focus">論標題</span>討論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.news 公告專區 
+        .line 
+        .content 討論標題討論標題討論標題討論<span class="focus">論標題</span>論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.history 大事記 
+        .line 
+        .content 討論標題討論標題討論標題討<span class="focus">論標題</span>討論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.biography 社員傳記 
+        .line 
+        .content 討論標題討論標題討論標題討<span class="focus">論標題</span>討論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.literature 文獻 
+        .line 
+        .content 討論標題討論標題<span class="focus">論標題</span>題討論標題討論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.biography 社員傳記 
+        .line 
+        .content 討論標題討<span class="focus">論標題</span>論標題討論標題討論標題討論標題討論標題討論標題論標題討論標題討論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.sing 吟唱專區 
+        .line 
+        .content 討論標題討論標題<span class="focus">論標題</span>題討論標題討論標題討論標題討論標題討論標題...
+      a(href="#")
+        p.class.biography 社員傳記 
+        .line 
+        .content 討論標<span class="focus">論標題</span>標題討論標題討論標題討論標題討論標題討論標題討論標題...
+    section.pageNavContent.news
+      .pageNav
+        a.prev(href="#") 
+          i.be-icon.be-icon-arrowLeft 
+          span 上一頁
+        a.num.active(href="#") 1
+        a.num(href="#") 2
+        a.num(href="#") 3
+        a.num(href="#") 4
+        a.num(href="#") 5
+        span ...
+        a.num(href="#") 20
+        a.num(href="#") 21
+        a.next(href="#") 
+          span 下一頁
+          i.be-icon.be-icon-arrowRight  
+             
