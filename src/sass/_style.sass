@@ -253,11 +253,6 @@ body
 				position: absolute
 				height: auto
 				bottom: 0	
-						
-
-
-
-
 	header
 		width: 100%
 		position: absolute
@@ -268,15 +263,53 @@ body
 		height: 110px
 		padding-top: 25px
 		+fc(d,d,space-between,center,d)
-		z-index: 100
+		z-index: 200
+		&.fixed
+			top: 0
+			position: fixed
+			left: 0
+			+ama(all,0s,0s)
+			-webkit-transform: translateY(-110px)
+			-moz-transform: translateY(-110px)
+			-ms-transform: translateY(-110px)
+			-o-transform: translateY(-110px)
+			transform: translateY(-110px)
+			background-color: rgba(255,255,255,0.9)
+			padding-bottom: 20px
+			padding-top: 20px
+			.logoContent
+				img
+					width: 340px
+			.mainMenu .sub
+				height: 30px		
+			.mainMenu .sub label input	
+				height: 30px
+			.mainMenu .sub a
+				height: 30px	
+			.mainMenu .main a
+				font-size: rem-calc(20)	
+
+			&.show
+				+ama(all,0.5s,0s)
+				-webkit-transform: translateY(0px)
+				-moz-transform: translateY(0px)
+				-ms-transform: translateY(0px)
+				-o-transform: translateY(0px)
+				transform: translateY(0px)
+			
+
+
 		.logoContent
-			width: 145px
+			width: auto
 			position: relative
 			z-index: 100
 			height: 100%
+			+fc(align-items,center)
+			img
+				max-width: 100%
 		.touchScop
 			width: 100%
-			height: 100%
+			height: 100vh
 			position: fixed
 			z-index: 990
 			background-color: rgba(0,0,0,0.5)
@@ -1299,9 +1332,14 @@ footer
 			width: 35% 
 			margin-top: -20px
 			+fc(justify-content,flex-start)
+			+fc(flex-wrap,wrap)
 			.webLogo
-				width: 180px
+				width: 100%
 				+fc(align-items,center)
+
+				img
+					width: 100%
+					max-width: 300px
 				i
 					color: #fff
 					font-size: rem-calc(80)
@@ -1316,6 +1354,7 @@ footer
 					font-size: rem-calc(16)
 					line-height: 1.6	
 					letter-spacing: 1px	
+					padding-top: 30px
 		.right
 			width: 65%
 			.social
@@ -2170,6 +2209,27 @@ article.maincontent
 						font-size: rem-calc(16)
 						img
 							margin-left: 40px	
+					.profileContainer
+						width: 100%
+						padding-top: 30px	
+						padding-bottom: 30px
+						+fc()
+						.left
+							width: 60%	
+							position: relative		
+							padding-right: 20px		
+							p
+								font-size: rem-calc(16)
+								color: $colorB
+								line-height: 1.7
+								letter-spacing: 1px
+						.right
+							width: 40%
+							position: relative		
+							img
+								width: 100%
+								height: auto
+
 
 				h2
 					font-size: rem-calc(40)
@@ -4149,6 +4209,7 @@ article.maincontent
 	body header
 		padding-right: 70px
 		padding-left: 70px		
+
 	footer
 		padding-right: 30px
 		padding-left: 30px			
@@ -4165,6 +4226,8 @@ article.maincontent
 	.maincontent.sing.inside .pageNavContent
 		padding-top: 0		
 @media only screen and (max-width:$xl)
+	body header.fixed .logoContent img
+		width: 280px
 	body header
 		padding-right: 50px
 		padding-left: 50px
@@ -4185,9 +4248,19 @@ article.maincontent
 			img
 				display: block	
 				width: 100%
-
+	body .maincontent section.literature .literatureContainer a.coverContainer
+		width: 190px
+		height: 310px
+	body .maincontent section.literature .literatureContainer a.coverContainer .cover
+		height: 280px	
 @media only screen and (max-width:$l)
-
+	body header.fixed .mainMenu .sub label input
+		height: 40px
+	body header.fixed .mainMenu .sub
+		height: auto
+	body header .logoContent img
+		width: 300px
+		height: auto
 	article.maincontent.partner section.partnerList a
 		padding-right: 7px
 		padding-left: 7px
@@ -4301,7 +4374,9 @@ article.maincontent
 	body .maincontent .index-slider
 		calc(100vw * .4)
 	body header .logoContent
-		width: 110px
+		width: auto
+		img
+			width: auto
 	body header
 		height: 90px
 	body .maincontent section.partners h3
@@ -4322,10 +4397,10 @@ article.maincontent
 		padding-right: 5%
 		padding-left: 5%		
 		padding-top: 65px
-		font-size: rem-calc(18)
+		font-size: rem-calc(17)
 	body .maincontent section.literature .literatureContainer a.coverContainer
 		height: 280px
-		width: 170px
+		width: 150px
 	body .maincontent section.partners .partnersContainer a.Link
 		margin-bottom: 30px
 	body .maincontent section.biography .biographyContent .subMenu
@@ -4357,12 +4432,12 @@ article.maincontent
 	body .maincontent section.news .newsContainer a.newsBoard:link .title
 		font-size: rem-calc(20)
 	body .maincontent section.news .newsContainer a.newsBoard
-		padding: 35px 15px 
+		padding: 35px 15px 30px 15px
 	body header .mainMenu
 		width: 50%
 		overflow: auto
 		height: auto
-		min-height: 100%
+		min-height: 100vh
 		position: fixed
 		background-color: rgba(255,255,255,0.9)
 		top: 0
@@ -4461,6 +4536,16 @@ article.maincontent
 
 
 @media only screen and (max-width:$m)
+	article.maincontent.news section.newsContent .profile.news .profileContainer
+		flex-wrap: wrap
+	article.maincontent.news section.newsContent .profile.news .profileContainer .left
+		width: 100%
+		padding-bottom: 30px
+		padding-right: 0	
+	article.maincontent.news section.newsContent .profile.news .profileContainer .right
+		width: 100%		
+	body .maincontent section.news
+		padding-top: 50px
 	article.maincontent.forum section.forumContent section.reply
 		padding-top: 30px
 	article.maincontent.forum section.forumContent .replyList
@@ -4607,6 +4692,18 @@ article.maincontent
 		padding-bottom: 30px
 
 @media only screen and (max-width:$s)
+	article.maincontent.news section.newsContent .profile.news .profileContainer .left
+		padding-right: 0	
+		text-align: center			
+	article.maincontent.news section.newsContent .profile.news .profileContainer
+		padding-right: 15px
+		padding-left: 15px
+
+	body header.fixed .menuTurnBtn
+		top: 30%
+	body header.fixed .logoContent img
+		width: 220px
+		opacity: 0.85
 	.popupContent .termsContent
 		padding: 30px 15px
 		width: 95%
@@ -5167,7 +5264,7 @@ article.maincontent
 		height: 60px
 		padding-top: 15px
 	body header .logoContent
-		width: 80px	
+		width: 60%
 	body .maincontent .index-slider
 		height: calc(100vw * .6)	
 	body .maincontent
@@ -5492,6 +5589,10 @@ article.maincontent
 		padding-top: 30px	
 	article.maincontent.partner section.partnerContent .replyList
 		border-top: none
+	body .maincontent section.news
+		padding-top: 30px	
+	footer .container .left .DirectorSaid p
+		padding-top: 0	
 		
 @media only screen and (max-width:$xs)
 	body .bg .bottom
@@ -5501,6 +5602,8 @@ article.maincontent
 	body .bg .middleLeft
 		width: 110vw
 		top: 50%
+	body header .logoContent
+		width: 75%	
 
 
 
