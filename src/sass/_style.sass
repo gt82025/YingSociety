@@ -284,6 +284,7 @@ body
 				height: 30px		
 			.mainMenu .sub label input	
 				height: 30px
+				line-height: 28px
 			.mainMenu .sub a
 				height: 30px	
 			.mainMenu .main a
@@ -1641,7 +1642,10 @@ article.maincontent
 			a
 				width: 25%
 				text-decoration: none
-				margin-bottom: 30px			
+				margin-bottom: 30px	
+				position: relative		
+				padding-right: 1.5%
+				padding-left: 1.5%
 				&:hover
 					img
 						box-shadow: 0 0 15px rgba(0,0,0,0.3)
@@ -1659,6 +1663,8 @@ article.maincontent
 					margin-right: auto
 					margin-left: auto
 					transform-origin: center
+					width: 100%
+					position: relative
 				p
 					text-align: center
 					color: $colorA
@@ -2215,7 +2221,7 @@ article.maincontent
 						padding-bottom: 30px
 						+fc()
 						.left
-							width: 60%	
+							width: auto	
 							position: relative		
 							padding-right: 20px		
 							p
@@ -2875,7 +2881,6 @@ article.maincontent
 						p
 							opacity: 0.7
 							position: relative
-							
 						img
 							position: absolute
 							display: block
@@ -3065,6 +3070,7 @@ article.maincontent
 					text-align: right
 					margin-right: 30px
 					padding-top: 20px
+
 					img
 						display: inline-block
 						width: 112px
@@ -3101,9 +3107,11 @@ article.maincontent
 		section.replyList
 			border-top: $colorC 1px solid
 			width: 100%
-			max-width: 1024px
+			// max-width: 1024px
 			margin-right: auto
 			margin-left: auto
+			padding-right: calc((100% - 1024px) / 2)
+			padding-left: calc((100% - 1024px) / 2)
 			
 			h2 
 				font-weight: normal
@@ -3165,14 +3173,14 @@ article.maincontent
 							font-size: rem-calc(16)	
 		section.oldMemberContent
 			padding-top: 0
-			max-width: 1300px
+			max-width: 1150px
 			width: 100%
 			margin-right: auto
 			margin-left: auto	
 			padding-bottom: 0
 			section.main
 				width: 100%
-				max-width: 1024px
+				max-width: 1150px
 				//border-bottom: $colorC 1px solid
 
 				h3
@@ -3187,7 +3195,8 @@ article.maincontent
 					padding-top: 30px
 					padding-bottom: 30px
 					color: $colorB
-					text-align: center
+					text-align: justify
+					text-align: left
 					&:last-child
 						padding-bottom: 0
 
@@ -3391,17 +3400,13 @@ article.maincontent
 										color: $colorA
 										&::before
 											opacity: 1
-																		
-
-
-											
-
 					.left	
 						+fc()
 						border-bottom: $colorD 2px solid
 						padding-bottom: 40px
 						padding-top: 40px
 						text-decoration: none
+						width: 74%
 						.head
 							width: 120px
 							.lastName
@@ -3564,7 +3569,11 @@ article.maincontent
 					box-shadow: 0 0 10px rgba(0,0,0,0.5 )
 					img
 						filter: invert(1)
-				
+				&.end
+					width: 30px
+					height: 30px
+					p,img
+						display: none
 				.Y
 					font-size: rem-calc(30)
 					font-weight: normal
@@ -3703,7 +3712,7 @@ article.maincontent
 				padding: 60px 0 60px 0
 				position: relative
 				+fc()
-				.textBox	
+				.textBox
 					position: relative
 					padding-left: 10%
 					padding-top: 55px
@@ -3724,6 +3733,7 @@ article.maincontent
 						color: $colorA
 						font-weight: normal
 						text-transform:uppercase
+						line-height: 1.5
 						
 					h4
 						font-size: rem-calc(30)	
@@ -4256,6 +4266,7 @@ article.maincontent
 @media only screen and (max-width:$l)
 	body header.fixed .mainMenu .sub label input
 		height: 40px
+		line-height: 38px
 	body header.fixed .mainMenu .sub
 		height: auto
 	body header .logoContent img
@@ -4536,6 +4547,8 @@ article.maincontent
 
 
 @media only screen and (max-width:$m)
+	article.maincontent.partner section.partnerList
+		padding-top: 30px
 	article.maincontent.news section.newsContent .profile.news .profileContainer
 		flex-wrap: wrap
 	article.maincontent.news section.newsContent .profile.news .profileContainer .left
@@ -5470,7 +5483,8 @@ article.maincontent
 	article.maincontent.oldMember section.oldMemberContent section.main p
 		padding-right: 15px
 		padding-left: 15px
-		font-size: rem-calc(15)				
+		font-size: rem-calc(15)	
+		text-align: center			
 	article.maincontent.oldMember section.replyList
 		padding-right: 15px
 		padding-left: 15px		
@@ -5593,7 +5607,8 @@ article.maincontent
 		padding-top: 30px	
 	footer .container .left .DirectorSaid p
 		padding-top: 0	
-		
+	article.maincontent.oldMember section.reply .textBox .submitBox
+		text-align: center	
 @media only screen and (max-width:$xs)
 	body .bg .bottom
 		bottom: 250px

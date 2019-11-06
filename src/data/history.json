@@ -24,7 +24,7 @@
         "pic": "images/img027.jpg"
     },
     {
-        "year": "1945",
+        "year": "1967",
         "month": "Jan",
         "code": "history_content.html",
         "StoryTitle": "瀛社創立",
@@ -32,7 +32,7 @@
         "pic": "images/img027.jpg"
     },
     {
-        "year": "1955",
+        "year": "1969",
         "month": "Feb",
         "code": "history_content.html",
         "StoryTitle": "瀛社變大",
@@ -40,7 +40,48 @@
         "pic": "images/Liu_Na_Ou.jpg"
     },
     {
-        "year": "1960",
+        "year": "1970",
+        "month": "Nov",
+        "code": "history_content.html",
+        "StoryTitle": "瀛社變大",
+        "StoryText": "劉吶鷗作為日本統治時代下的台灣，沒有像林獻堂哪樣強烈的家國情懷，而是一位沉迷在文學、電影、女色與美食的唯美主義者，是時代的局外人，也是一位沒有太多國族認同或者說是超越國族認同的文化人。其一生多采多姿，但只留下了一本1927年的日記，現藏於國立臺灣文學館[1]。",
+        "pic": "images/img027.jpg"
+    },
+    {
+        "year": "1972",
+        "month": "Nov",
+        "code": "history_content.html",
+        "StoryTitle": "瀛社變大",
+        "StoryText": "劉吶鷗作為日本統治時代下的台灣，沒有像林獻堂哪樣強烈的家國情懷，而是一位沉迷在文學、電影、女色與美食的唯美主義者，是時代的局外人，也是一位沒有太多國族認同或者說是超越國族認同的文化人。其一生多采多姿，但只留下了一本1927年的日記，現藏於國立臺灣文學館[1]。",
+        "pic": "images/img027.jpg"
+    },
+    {
+        "year": "1975",
+        "month": "Nov",
+        "code": "history_content.html",
+        "StoryTitle": "瀛社變大",
+        "StoryText": "劉吶鷗作為日本統治時代下的台灣，沒有像林獻堂哪樣強烈的家國情懷，而是一位沉迷在文學、電影、女色與美食的唯美主義者，是時代的局外人，也是一位沒有太多國族認同或者說是超越國族認同的文化人。其一生多采多姿，但只留下了一本1927年的日記，現藏於國立臺灣文學館[1]。",
+        "pic": "images/img027.jpg"
+    },
+    {
+        "year": "1978",
+        "month": "Nov",
+        "code": "history_content.html",
+        "StoryTitle": "瀛社變大",
+        "StoryText": "劉吶鷗作為日本統治時代下的台灣，沒有像林獻堂哪樣強烈的家國情懷，而是一位沉迷在文學、電影、女色與美食的唯美主義者，是時代的局外人，也是一位沒有太多國族認同或者說是超越國族認同的文化人。其一生多采多姿，但只留下了一本1927年的日記，現藏於國立臺灣文學館[1]。",
+        "pic": "images/img027.jpg"
+    },
+    {
+        "year": "1981",
+        "month": "Nov",
+        "code": "history_content.html",
+        "StoryTitle": "瀛社變大",
+        "StoryText": "劉吶鷗作為日本統治時代下的台灣，沒有像林獻堂哪樣強烈的家國情懷，而是一位沉迷在文學、電影、女色與美食的唯美主義者，是時代的局外人，也是一位沒有太多國族認同或者說是超越國族認同的文化人。其一生多采多姿，但只留下了一本1927年的日記，現藏於國立臺灣文學館[1]。",
+        "pic": "images/img027.jpg"
+    }
+    ,
+    {
+        "year": "1986",
         "month": "Nov",
         "code": "history_content.html",
         "StoryTitle": "瀛社變大",
